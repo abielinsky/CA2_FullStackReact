@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          first prove of react abiel
+          first prove of react abiel, Ong
         </a>
       </header>
     </div>
