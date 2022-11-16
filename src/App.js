@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React with ABIEL, ERLING AND ONG
+          first prove of react abiel
         </a>
       </header>
     </div>
