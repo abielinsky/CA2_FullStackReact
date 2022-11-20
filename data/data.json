@@ -1,0 +1,1512 @@
+ [
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "SportsActivityLocation",
+        "TouristAttraction",
+        "CafeOrCoffeeShop"
+      ],
+      "name": "Lismore Castle Gardens",
+      "url": "http://www.lismorecastlegardens.com",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -7.9328085,
+        "latitude": 52.1398962
+      },
+      "telephone": "+3535854061",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lismore",
+        "addressRegion": "Waterford",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Walking",
+        "Gardens",
+        "Attraction",
+        "Garden",
+        "Cafe",
+        "Food and Drink"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "Larchill Arcadian Gardens",
+      "url": "https://larchill.ie/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -6.6588015,
+        "latitude": 53.4411683
+      },
+      "telephone": "+35316287354",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kilcock",
+        "addressRegion": "Kildare",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Attraction",
+        "Historic Houses and Castle",
+        "Gardens",
+        "Garden",
+        "Tour"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "Museum"],
+      "name": "Michael J Quill Centre",
+      "url": "http://www.historic-ireland.com/places/778.html",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.46143,
+        "latitude": 51.902656
+      },
+      "telephone": "+353646685511",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kilgarvan",
+        "addressRegion": "Kerry",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Museums and Attraction"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "Museum"],
+      "name": "Arklow Maritime Museum",
+      "url": "http://www.arklowmaritimeheritage.ie",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -6.1493991,
+        "latitude": 52.7985048
+      },
+      "telephone": "+353864460784",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Arklow",
+        "addressRegion": "Wicklow",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Museums and Attraction"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "FoodEstablishment",
+        "TravelAgency",
+        "TouristAttraction",
+        "Landform",
+        "CafeOrCoffeeShop",
+        "Restaurant"
+      ],
+      "name": "Sonairte The National Ecology Centre",
+      "url": "http://www.sonairte.ie",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -6.257022,
+        "latitude": 53.6780762
+      },
+      "telephone": "+353419827572",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Laytown",
+        "addressRegion": "Meath",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Agriculture",
+        "Nature and Wildlife",
+        "Food and Drink",
+        "Restaurant",
+        "Gardening",
+        "Learning",
+        "Activity Operator",
+        "Natural Landscape",
+        "Attraction",
+        "Cafe",
+        "Local Produce"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "St Mary's Church",
+      "url": "https://heritageireland.ie/visit/places-to-visit/st-marys-church-gowran/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -7.0647193,
+        "latitude": 52.628901
+      },
+      "telephone": "+353567767726",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gowran",
+        "addressRegion": "Kilkenny",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Attraction",
+        "Historic Houses and Castle",
+        "Church Abbey",
+        "Monastery",
+        "Churches",
+        "Abbeys and Monastery"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "Store",
+        "ShoppingCenter",
+        "TouristAttraction",
+        "ArtGallery"
+      ],
+      "name": "Jerpoint Glass Studio",
+      "url": "http://www.jerpointglass.com",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -7.1967314,
+        "latitude": 52.5185184
+      },
+      "telephone": "+353567724350",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Thomastown",
+        "addressRegion": "Kilkenny",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Craft",
+        "Shopping",
+        "Shopping Centres and Department Store",
+        "Art Gallery",
+        "Attraction",
+        "Food Shops"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction", "Sculpture"],
+      "name": "The North Mayo Sculpture Trail",
+      "url": "",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.16317710100111,
+        "latitude": 54.1290890768704
+      },
+      "telephone": "+353(0)9845107",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ballina",
+        "addressRegion": "Mayo",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Public Sculpture"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "SportsActivityLocation", "Museum"],
+      "name": "Lár Na Páirce Museum - The Story of Gaelic Games",
+      "url": "http://larnapairce.ie",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -7.8130745,
+        "latitude": 52.6782242
+      },
+      "telephone": "+35350422702",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Thurles",
+        "addressRegion": "Tipperary",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Gaa",
+        "Attraction",
+        "Museums and Attraction",
+        "Venue",
+        "Sports Venues"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "Trinitarian Monastery",
+      "url": "https://www.adareparish.ie/our-parish/virtual-tour-2/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -8.7890832,
+        "latitude": 52.564815
+      },
+      "telephone": "+35361396172",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Adare",
+        "addressRegion": "Limerick",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Attraction",
+        "Historic Houses and Castle",
+        "Church Abbey",
+        "Monastery",
+        "Churches",
+        "Abbeys and Monastery"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "O'Donovan's Castle",
+      "url": "https://www.castles.nl/castle-donovan",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.2827815,
+        "latitude": 51.692145
+      },
+      "telephone": "+3532821489",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Drimoleague",
+        "addressRegion": "Cork",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Castle", "Attraction", "Historic Houses and Castle"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "Clonmore Castle",
+      "url": "http://www.megalithicireland.com/Clonmore%20Castle,%20Carlow.html",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -6.5751246,
+        "latitude": 52.8282856
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Clonmore",
+        "addressRegion": "Carlow",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Castle",
+        "Attraction",
+        "Historic Houses and Castle",
+        "Ruins"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "Dún Na Séad Castle",
+      "url": "https://www.baltimorecastle.ie/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.3731024,
+        "latitude": 51.4835713
+      },
+      "telephone": "+3532820735",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Baltimore",
+        "addressRegion": "Cork",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Historic Houses and Castle", "Castle"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "Conna Castle",
+      "url": "https://www.castles.nl/conna-castle",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -8.1016545,
+        "latitude": 52.0945205
+      },
+      "telephone": "+353862149601",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Conna",
+        "addressRegion": "Cork",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Castle", "Attraction", "Historic Houses and Castle"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "Lynch's Castle",
+      "url": "https://thisisgalway.ie/the-history-of-lynchs-castle/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.0522862,
+        "latitude": 53.2731658
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Galway City",
+        "addressRegion": "Galway",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Castle", "Attraction", "Historic Houses and Castle"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "Museum"],
+      "name": "The Water Wheels",
+      "url": "https://www.govisitdonegal.com/things-to-do/activities/the-water-wheels",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -8.19993,
+        "latitude": 54.508857
+      },
+      "telephone": "+353719851580",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ballyshannon",
+        "addressRegion": "Donegal",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Museums and Attraction"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "Museum"],
+      "name": "Cashel Heritage Centre",
+      "url": "https://www.cashel.ie/cashel-heritage-centre/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -7.8876149,
+        "latitude": 52.5169758
+      },
+      "telephone": "+3536261333",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cashel",
+        "addressRegion": "Tipperary",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Museums and Attraction"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "SportsActivityLocation",
+        "TouristAttraction",
+        "FoodEstablishment",
+        "Restaurant",
+        "Hotel"
+      ],
+      "name": "Cashel House Hotel Gardens",
+      "url": "https://cashelhouse.ie/cms/gardens/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.8079229,
+        "latitude": 53.4196461
+      },
+      "telephone": "+3539531001",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cashel Bay",
+        "addressRegion": "Galway",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Gardening",
+        "Nature and Wildlife",
+        "Photography",
+        "Learning",
+        "Walking",
+        "Gardens",
+        "Attraction",
+        "Garden",
+        "Food and Drink",
+        "Restaurant"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction"],
+      "name": "St. Columb's Gardens",
+      "url": "http://www.donegalgardentrail.com/site/?page_id=2320",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -7.9031983,
+        "latitude": 55.0044336
+      },
+      "telephone": "+353749137071",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Churchill",
+        "addressRegion": "Donegal",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Gardening",
+        "Nature and Wildlife",
+        "Gardens",
+        "Attraction",
+        "Garden"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction", "CafeOrCoffeeShop"],
+      "name": "Tick-Tock Activity Farm",
+      "url": "https://www.facebook.com/ticktockactivityfarm/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -6.2344472,
+        "latitude": 52.7937503
+      },
+      "telephone": "+35340233624",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Arklow",
+        "addressRegion": "Wicklow",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Visitor Farm",
+        "Attraction",
+        "Cafe",
+        "Food and Drink",
+        "Activity Operator"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "St. Mullins Ecclesiastical Village",
+      "url": "",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -6.92901593581485,
+        "latitude": 52.4912996422915
+      },
+      "telephone": "+353879103672",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Saint Mullins",
+        "addressRegion": "Carlow",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Church Abbey",
+        "Monastery",
+        "Attraction",
+        "Churches",
+        "Abbeys and Monastery"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "Killoughternane",
+      "url": "",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -6.82471115309872,
+        "latitude": 52.6628559636995
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bagenalstown",
+        "addressRegion": "Carlow",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Church Abbey",
+        "Monastery",
+        "Attraction",
+        "Churches",
+        "Abbeys and Monastery",
+        "Ruins",
+        "Historic Houses and Castle"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction"],
+      "name": "Cork City Library",
+      "url": "http://www.corkcitylibraries.ie",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -8.475332,
+        "latitude": 51.896731
+      },
+      "telephone": "+353214924900",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cork City",
+        "addressRegion": "Cork",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Learning", "Attraction", "Literary Ireland"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "St. Patrick's Well Cross",
+      "url": "",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -7.39327656445312,
+        "latitude": 52.4160710356843
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ahenny",
+        "addressRegion": "Tipperary",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Church Abbey",
+        "Monastery",
+        "Attraction",
+        "Churches",
+        "Abbeys and Monastery"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "St. Laurence's Gate - Drogheda Walls",
+      "url": "http://www.discoverboynevalley.ie/boyne-valley-drive/heritage-sites/st-laurences-gate-drogheda-walls",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -6.347102,
+        "latitude": 53.71591
+      },
+      "telephone": "+353419872843",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Drogheda",
+        "addressRegion": "Louth",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Photography",
+        "Learning",
+        "Attraction",
+        "Historic Houses and Castle"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction"],
+      "name": "Caher Bridge Garden",
+      "url": "https://www.facebook.com/pages/Caher-Bridge-Garden/173040762714810",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.2510881,
+        "latitude": 53.118571
+      },
+      "telephone": "+353657076225",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Fanore",
+        "addressRegion": "Clare",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Gardening",
+        "Nature and Wildlife",
+        "Gardens",
+        "Attraction",
+        "Garden"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction", "Beach"],
+      "name": "Derrymore Beach",
+      "url": "",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.84292340148678,
+        "latitude": 52.2406842667498
+      },
+      "telephone": "+353(0)667121288",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Derrymore",
+        "addressRegion": "Kerry",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Beach"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction"],
+      "name": "Dhu Varren Garden",
+      "url": "http://www.dhuvarrengarden.com",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.696926,
+        "latitude": 52.1342514
+      },
+      "telephone": "+353876104492",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Milltown",
+        "addressRegion": "Kerry",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Gardening",
+        "Nature and Wildlife",
+        "Gardens",
+        "Attraction",
+        "Garden"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "Store", "TouristAttraction", "ArtGallery"],
+      "name": "The Hamilton Gallery",
+      "url": "https://hamiltongallery.ie/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -8.47239424040606,
+        "latitude": 54.2705261165702
+      },
+      "telephone": "+353719143686",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sligo Town",
+        "addressRegion": "Sligo",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Craft", "Shopping", "Art Gallery", "Attraction"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction", "Landform"],
+      "name": "The Donegal Gaeltacht",
+      "url": "",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -8.1107141,
+        "latitude": 54.654487
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Glencolmcille",
+        "addressRegion": "Donegal",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Natural Landscape", "Attraction"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "Store",
+        "ShoppingCenter",
+        "Museum",
+        "CafeOrCoffeeShop"
+      ],
+      "name": "The House of Waterford Crystal",
+      "url": "https://www.waterfordvisitorcentre.com/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -7.1067612,
+        "latitude": 52.2592684
+      },
+      "telephone": "+35351317000",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Waterford City",
+        "addressRegion": "Waterford",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Craft",
+        "Shopping",
+        "Learning",
+        "Shopping Centres and Department Store",
+        "Attraction",
+        "Museums and Attraction",
+        "Cafe",
+        "Food and Drink",
+        "Food Shops",
+        "Tour"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "Lemanaghan Monastic Site",
+      "url": "http://www.megalithicireland.com/Lemanaghan%20Church.html",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -7.7442783,
+        "latitude": 53.2933767
+      },
+      "telephone": "+353579346839",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ballycumber",
+        "addressRegion": "Offaly",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Ireland's Hidden Hearthlands",
+        "Activity",
+        "Church Abbey",
+        "Monastery",
+        "Attraction",
+        "Churches",
+        "Abbeys and Monastery",
+        "Ruins",
+        "Historic Houses and Castle"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "Skryne Church",
+      "url": "https://www.skryneandrathfeighparish.ie/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -6.5631088,
+        "latitude": 53.5859852
+      },
+      "telephone": "+3530469025152",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kells -Kerry",
+        "addressRegion": "Meath",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Church Abbey",
+        "Monastery",
+        "Attraction",
+        "Churches",
+        "Abbeys and Monastery"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction", "Landform"],
+      "name": "Townley Hall Woods",
+      "url": "",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -6.438562,
+        "latitude": 53.734372
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Oldbridge",
+        "addressRegion": "Meath",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Natural Landscape", "Attraction"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "TouristAttraction",
+        "LandmarksOrHistoricalBuildings"
+      ],
+      "name": "Brideweir House",
+      "url": "https://www.brideweir.ie",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -8.1550475,
+        "latitude": 52.0869699
+      },
+      "telephone": "+3532536386",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Conna",
+        "addressRegion": "Cork",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Castle", "Attraction", "Historic Houses and Castle"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction"],
+      "name": "Cé Bhaile an Sceilg (Ballinskelligs Pier)",
+      "url": "",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -10.274349,
+        "latitude": 51.810877
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ballinskelligs",
+        "addressRegion": "Kerry",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Embarkation Point"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction"],
+      "name": "Cé Dhún Chaoin (Dunquin Pier)",
+      "url": "",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -10.4606725,
+        "latitude": 52.1243059
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dunquin",
+        "addressRegion": "Kerry",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Embarkation Point"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction"],
+      "name": "Bantry Harbour",
+      "url": "",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.4611105,
+        "latitude": 51.6798532
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bantry",
+        "addressRegion": "Cork",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Embarkation Point"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "Museum", "CafeOrCoffeeShop"],
+      "name": "World War 1 Trench Experience",
+      "url": "http://www.cavanmuseum.ie/Default.aspx?StructureID_str=87",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -7.2010829,
+        "latitude": 53.8670567
+      },
+      "telephone": "+353498544070",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ballyjamesduff",
+        "addressRegion": "Cavan",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Ireland's Hidden Hearthlands",
+        "Activity",
+        "Attraction",
+        "Museums and Attraction",
+        "Cafe",
+        "Food and Drink"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "SportsActivityLocation",
+        "TouristAttraction",
+        "Landform",
+        "Park"
+      ],
+      "name": "Bernard McGlinchey Town Park",
+      "url": "http://www.donegalcoco.ie",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -7.73671587256198,
+        "latitude": 54.9511565041299
+      },
+      "telephone": "+353(0)749153900",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Letterkenny",
+        "addressRegion": "Donegal",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Walking",
+        "Natural Landscape",
+        "Attraction",
+        "Public Park",
+        "Nature and Wildlife"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "Store", "TouristAttraction", "ArtGallery"],
+      "name": "126 Artist-Run Gallery",
+      "url": "https://126gallery.com/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.0494491,
+        "latitude": 53.2772719
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Galway City",
+        "addressRegion": "Galway",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Craft", "Shopping", "Art Gallery", "Attraction"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction"],
+      "name": "Colla Pier",
+      "url": "",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.561419,
+        "latitude": 51.506532
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Schull",
+        "addressRegion": "Cork",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Embarkation Point"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction", "CafeOrCoffeeShop"],
+      "name": "Heron Gallery Café and Gardens",
+      "url": "https://www.facebook.com/herongallerycafe/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.62909269521481,
+        "latitude": 51.6026004594854
+      },
+      "telephone": "+3532767278",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ahakista",
+        "addressRegion": "Cork",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Gardens",
+        "Attraction",
+        "Garden",
+        "Cafe",
+        "Food and Drink"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "Museum"],
+      "name": "Passage West Maritime Museum CLG",
+      "url": "http://passagemuseum.ie/index.html",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -8.336456,
+        "latitude": 51.872362
+      },
+      "telephone": "+353871363588",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Passage West",
+        "addressRegion": "Cork",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Museums and Attraction"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction", "Sculpture"],
+      "name": "IUNVA Post 19",
+      "url": "https://iunvapost19.com/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -7.7318534923462,
+        "latitude": 54.9574038713154
+      },
+      "telephone": "+353864160532",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Letterkenny",
+        "addressRegion": "Donegal",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Public Sculpture"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "Store", "TouristAttraction", "ArtGallery"],
+      "name": "Lavit Gallery",
+      "url": "https://lavitgallery.com/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -8.4793557,
+        "latitude": 51.8963646
+      },
+      "telephone": "+353214277749",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cork City",
+        "addressRegion": "Cork",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Craft", "Shopping", "Art Gallery", "Attraction"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "SportsActivityLocation",
+        "TouristAttraction",
+        "Beach",
+        "Landform"
+      ],
+      "name": "Spanish Point Beach",
+      "url": "https://www.blueflag.global/show-site?siteId=6624",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.4332912,
+        "latitude": 52.843133
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Spanish Point",
+        "addressRegion": "Clare",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Surfing",
+        "Activity Operator",
+        "Swimming",
+        "Swimming Pools and Water Park",
+        "Venue",
+        "Attraction",
+        "Beach",
+        "Natural Landscape"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": [
+        "LocalBusiness",
+        "SportsActivityLocation",
+        "TouristAttraction",
+        "Beach"
+      ],
+      "name": "Cross Strand Beach",
+      "url": "http://www.cleancoastsireland.org/",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -9.9098501282715,
+        "latitude": 53.7163323551163
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cross",
+        "addressRegion": "Mayo",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": [
+        "Activity",
+        "Surfing",
+        "Activity Operator",
+        "Attraction",
+        "Beach"
+      ]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction", "Beach"],
+      "name": "Culleton’s Gap Beach",
+      "url": "",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -6.36533822519527,
+        "latitude": 52.371806499159
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Curracloe",
+        "addressRegion": "Wexford",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Beach"]
+    },
+    {
+      "@context": "http://schema.org",
+      "@type": ["LocalBusiness", "TouristAttraction", "Beach"],
+      "name": "Cahore Beach",
+      "url": "",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": -6.197159,
+        "latitude": 52.5590215
+      },
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cahore",
+        "addressRegion": "Wexford",
+        "addressCountry": "Republic of Ireland"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "caption": "Fáilte Ireland Logo",
+        "url": "https://failtecdn.azureedge.net/failteireland/F%C3%A1ilte_Ireland_Logo_OpenDataAPI.jpg"
+      },
+      "tags": ["Activity", "Attraction", "Beach"]
+    }
+  ]
+
