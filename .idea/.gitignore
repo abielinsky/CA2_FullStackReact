@@ -6,3 +6,7 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
+#excluding the packages
+/Client/node_modules/
+/server/node_modules/
