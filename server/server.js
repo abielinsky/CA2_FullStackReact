@@ -11,7 +11,7 @@ app.use(require(`cors`)({credentials: true, origin: process.env.LOCAL_HOST}))
 
 
 // Routers
-app.use(require(`./routes/cars`))
+app.use(require(`attractions/server/routes/attractions`))
 
 
 // Port
@@ -28,7 +28,7 @@ app.use((req, res, next) => {next(createError(404))})
 app.use(function (err, req, res, next)
 {
     console.error(err.message)
-    if (!err.statusCode) 
+    if (!err.statusCode)
     {
         err.statusCode = 500
     }

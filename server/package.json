@@ -1,12 +1,12 @@
 {
-  "name": "server_side_routing",
+  "name": "01_CA2Attractions",
   "version": "1.0.0",
-  "description": "Server-side routing example",
+  "description": "01_CA2Attractions",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Derek O Reilly",
+  "author": "Abiel, Erling, Ong",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^4.0.1",
