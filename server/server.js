@@ -2,6 +2,10 @@
 require(`dotenv`).config({path:`./config/.env`})
 
 
+// Database
+require(`./config/db`)
+
+
 // Express
 const express = require(`express`)
 const app = express()
@@ -11,7 +15,7 @@ app.use(require(`cors`)({credentials: true, origin: process.env.LOCAL_HOST}))
 
 
 // Routers
-app.use(require(`./routes/attractions`))
+app.use(require(`./routes/cars`))
 
 
 // Port
@@ -28,7 +32,7 @@ app.use((req, res, next) => {next(createError(404))})
 app.use(function (err, req, res, next)
 {
     console.error(err.message)
-    if (!err.statusCode)
+    if (!err.statusCode) 
     {
         err.statusCode = 500
     }

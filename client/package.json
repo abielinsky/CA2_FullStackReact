@@ -1,5 +1,5 @@
 {
-  "name": "server_side_routing",
+  "name": "mongodb_with_validation",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -32,7 +32,7 @@
       "last 1 safari version"
     ]
   },
-  "description": "Server-side routing example",
+  "description": "Example using a MongoDB collection with client-side and server-side validation",
   "main": "index.js",
   "devDependencies": {},
   "author": "Derek O Reilly",

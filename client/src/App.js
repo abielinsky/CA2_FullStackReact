@@ -1,14 +1,14 @@
 import React, {Component} from "react"
 import {BrowserRouter, Switch, Route} from "react-router-dom"
+
 import "bootstrap/dist/css/bootstrap.css"
 import "./css/App.css"
+import "./css/main.css"
 
-
-import AddCar from "./components/others/AddCar"
-import EditCar from "./components/others/EditCar"
-import DeleteCar from "./components/others/DeleteCar"
-import DisplayAllAttractions from "./components/DisplayAllAttractions"
-import getAttractionsData from "./components/getAttractionsData";
+import AddCar from "./components/AddCar"
+import EditCar from "./components/EditCar"
+import DeleteCar from "./components/DeleteCar"
+import DisplayAllCars from "./components/DisplayAllCars"
 
     
 export default class App extends Component 
@@ -17,17 +17,13 @@ export default class App extends Component
     {
         return (
             <BrowserRouter>
-                <Switch>
-                    <Route exact path="/" component={DisplayAllAttractions} />
-
-
-                    {/*<Route exact path="/AddCar" component={AddCar} />*/}
-                    {/*<Route exact path="/EditCar/:id" component={EditCar} />*/}
-                    {/*<Route exact path="/DeleteCar/:id" component={DeleteCar} />*/}
-
-
-                    <Route exact path="/DisplayAllAttractions" component={DisplayAllAttractions}/>
-                    <Route path="*" component={DisplayAllAttractions}/>
+                <Switch>                 
+                    <Route exact path="/" component={DisplayAllCars} />
+                    <Route exact path="/AddCar" component={AddCar} />
+                    <Route exact path="/EditCar/:id" component={EditCar} />
+                    <Route exact path="/DeleteCar/:id" component={DeleteCar} />
+                    <Route exact path="/DisplayAllCars" component={DisplayAllCars}/> 
+                    <Route path="*" component={DisplayAllCars}/>                            
                 </Switch>
             </BrowserRouter>
         )
