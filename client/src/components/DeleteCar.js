@@ -19,6 +19,7 @@ export default class DeleteCar extends Component
     
     componentDidMount() 
     {   
+        axios.defaults.withCredentials = true // needed for sessions to work
         axios.delete(`${SERVER_HOST}/cars/${this.props.match.params.id}`)
         .then(res => 
         {

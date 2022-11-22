@@ -2,6 +2,10 @@
 require(`dotenv`).config({path:`./config/.env`})
 
 
+// Database
+require(`./config/db`)
+
+
 // Express
 const express = require(`express`)
 const app = express()

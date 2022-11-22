@@ -19,9 +19,9 @@ export default class DisplayAllCars extends Component
         }
     }
     
-       
+    
     componentDidMount() 
-    {     
+    {
         axios.get(`${SERVER_HOST}/cars`)
         .then(res => 
         {

@@ -3,6 +3,7 @@ import {BrowserRouter, Switch, Route} from "react-router-dom"
 
 import "bootstrap/dist/css/bootstrap.css"
 import "./css/App.css"
+import "./css/main.css"
 
 import AddCar from "./components/AddCar"
 import EditCar from "./components/EditCar"

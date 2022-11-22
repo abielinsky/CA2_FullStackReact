@@ -41,43 +41,99 @@ export default class AddCar extends Component
     {
         e.preventDefault()
 
-        const carObject = {
-            model: this.state.model,
-            colour: this.state.colour,
-            year: this.state.year,
-            price: this.state.price
-        }
+        this.setState({ wasSubmittedAtLeastOnce: true });
 
-        axios.post(`${SERVER_HOST}/cars`, carObject)
-        .then(res => 
-        {   
-            if(res.data)
-            {
-                if (res.data.errorMessage)
+        const formInputsState = this.validate();
+        
+        if (Object.keys(formInputsState).every(index => formInputsState[index])) 
+        {
+            const carObject = {
+                model: this.state.model,
+                colour: this.state.colour,
+                year: this.state.year,
+                price: this.state.price,
+                wasSubmittedAtLeastOnce: false
+            }
+
+            axios.post(`${SERVER_HOST}/cars`, carObject)
+            .then(res => 
+            {   
+                if(res.data)
                 {
-                    console.log(res.data.errorMessage)    
+                    if (res.data.errorMessage)
+                    {
+                        console.log(res.data.errorMessage)    
+                    }
+                    else
+                    {   
+                        console.log("Record added")
+                        this.setState({redirectToDisplayAllCars:true})
+                    } 
                 }
                 else
-                {   
-                    console.log("Record added")
-                    this.setState({redirectToDisplayAllCars:true})
-                } 
-            }
-            else
-            {
-                console.log("Record not added")
-            }
-        })
+                {
+                    console.log("Record not added")
+                }
+            })
+        }
+    }
+
+
+    validateModel()
+    {    
+        const pattern = /^[A-Za-z]+$/;
+        return pattern.test(String(this.state.model))
+    }
+    
+    
+    validateColour()
+    {    
+        const pattern = /^[A-Za-z]+$/;
+        return pattern.test(String(this.state.colour))
+    }
+    
+    
+    validateYear()
+    {    
+        const year = parseInt(this.state.year)
+        const today = new Date()   
+        return (year >= 1990 && year <= today.getFullYear())
+    }
+
+
+    validatePrice()
+    {    
+        const price = parseInt(this.state.price)
+        return (price >= 1000 && price <= 100000)
+    }
+
+
+    validate() 
+    {
+        return {
+            model: this.validateModel(),
+            colour: this.validateColour(),
+            year: this.validateYear(),
+            price: this.validatePrice()
+        };
     }
 
 
     render()
     { 
+        let errorMessage = "";
+        if(this.state.wasSubmittedAtLeastOnce)
+        {
+            errorMessage = <div className="error">Car Details are incorrect<br/></div>;
+        }         
+    
         return (
             <div className="form-container"> 
                 {this.state.redirectToDisplayAllCars ? <Redirect to="/DisplayAllCars"/> : null}                                            
                     
-                <Form>               
+                <Form>
+                    {errorMessage}
+               
                     <Form.Group controlId="model">
                         <Form.Label>Model</Form.Label>
                         <Form.Control ref = {(input) => { this.inputToFocus = input }} type="text" name="model" value={this.state.model} onChange={this.handleChange} />

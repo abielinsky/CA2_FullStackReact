@@ -1,6 +1,6 @@
 {
-  "short_name": "server_side_routing",
-  "name": "Server-side routing example",
+  "short_name": "mongodb_with_validation",
+  "name": "Example using a MongoDB collection with client-side and server-side validation",
   "icons": [
     {
       "src": "favicon.ico",

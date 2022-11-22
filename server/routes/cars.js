@@ -1,77 +1,105 @@
 const router = require(`express`).Router()
 
+const carsModel = require(`../models/cars`)
 
-
-const cars = [{_id:0, model:"Avensis", colour:"Red", year:2020, price:30000},
-              {_id:1, model:"Yaris", colour:"Green", year:2010, price:2000},
-              {_id:2, model:"Corolla", colour:"Red", year:2019, price:20000},
-              {_id:3, model:"Avensis", colour:"Silver", year:2018, price:20000},
-              {_id:4, model:"Camry", colour:"White", year:2020, price:50000}]
-
-let uniqueId = cars.length
-
-
-
-// read all items from cars JSON
-router.get(`/cars`, (req, res) => {   
-    res.json(cars)
+// read all records
+router.get(`/cars`, (req, res) => 
+{   
+    //user does not have to be logged in to see car details
+    carsModel.find((error, data) => 
+    {
+        res.json(data)
+    })
 })
 
 
-// Read one item from cars JSON
+// Read one record
 router.get(`/cars/:id`, (req, res) => 
 {
-    const selectedCars = cars.filter(car => car._id === parseInt(req.params.id))
-    
-    res.json(selectedCars[0])
+    carsModel.findById(req.params.id, (error, data) => 
+    {
+        res.json(data)
+    })
 })
 
 
-// Add new item to cars JSON
-router.post(`/cars`, (req, res) => {
-    let newCar = req.body
-    newCar._id = uniqueId
-    cars.push(newCar)
-    
-    uniqueId++
-    
-    res.json(cars)
+// Add new record
+router.post(`/cars`, (req, res) => 
+{
+    // validate input
+    const today = new Date();
+    if(!/^[a-zA-Z]+$/.test(req.body.model))
+    {
+        res.json({errorMessage:`Model must be a string`}); 
+    }
+    else if(!/^[a-zA-Z]+$/.test(req.body.colour))
+    {
+        res.json({errorMessage:`Colour must be a string`});         
+    }
+    else if(req.body.year < 1990)     // between 1990 and the current year
+    {
+        res.json({errorMessage:`Year needs to be greater than or equal to 1990`});         
+    }
+    else if(req.body.year > today.getFullYear())
+    {
+        res.json({errorMessage:`Year needs to be this year or less`});         
+    }
+    else if(req.body.price < 1000 || req.body.price > 100000)       // between €1000 and €100000                
+    {
+        res.json({errorMessage:`Price needs to be between €1000 and €100000`}); 
+    }
+    else // input is valid
+    {    
+        carsModel.create(req.body, (error, data) => 
+        {
+            res.json(data)
+        })
+    }
 })
 
 
-// Update one item in cars JSON
+// Update one record
 router.put(`/cars/:id`, (req, res) => 
 {
-    const updatedCar = req.body
-    cars.map(car => 
+    // validate input
+    const today = new Date();
+    if(!/^[a-zA-Z]+$/.test(req.body.model))
     {
-        if(car._id === parseInt(req.params.id))
+        res.json({errorMessage:`Model must be a string`}); 
+    }
+    else if(!/^[a-zA-Z]+$/.test(req.body.colour))
+    {
+        res.json({errorMessage:`Colour must be a string`});         
+    }
+    else if(req.body.year < 1990)     // between 1990 and the current year
+    {
+        res.json({errorMessage:`Year needs to be greater than or equal to 1990`});         
+    }
+    else if(req.body.year > today.getFullYear())
+    {
+        res.json({errorMessage:`Year needs to be this year or less`});         
+    }
+    else if(req.body.price < 1000 || req.body.price > 100000)       // between €1000 and €100000                
+    {
+        res.json({errorMessage:`Price needs to be between €1000 and €100000`}); 
+    }
+    else // input is valid
+    {
+        carsModel.findByIdAndUpdate(req.params.id, {$set: req.body}, (error, data) => 
         {
-            car.model = updatedCar.model
-            car.colour = updatedCar.colour
-            car.year = updatedCar.year
-            car.price = updatedCar.price
-        }
-    })
-    
-    res.json(cars)   
+            res.json(data)
+        })        
+    }
 })
 
 
-// Delete one item from cars JSON
+// Delete one record
 router.delete(`/cars/:id`, (req, res) => 
 {
-    let selectedIndex
-    cars.map((car, index) => 
+    carsModel.findByIdAndRemove(req.params.id, (error, data) => 
     {
-        if(car._id === parseInt(req.params.id))
-        {
-            selectedIndex = index
-        }
-    })
-    cars.splice(selectedIndex, 1)
-    
-    res.json(cars)       
+        res.json(data)
+    })       
 })
 
 module.exports = router
