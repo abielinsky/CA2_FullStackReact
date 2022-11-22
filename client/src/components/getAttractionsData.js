@@ -30,27 +30,27 @@ export default class getAttractionsData extends Component
                 axios.post(`${SERVER_HOST}/Attractions`, data)
                     .then(res =>
                         {
-                            if(res.data)
-                            {
-                                console.log(res.data);
-                                if (res.data.errorMessage)
-                                {
-                                    console.log(res.data.errorMessage)
-                                }
-                                else
-                                {
-                                    console.log("DATA OK")
-                                }
-                                this.setState({getAttractionsData:true})
-                            }
-                            else
-                            {
-
-                                alert("DATA LOADED")
-                                this.setState({getAttractionsData:true})
-                                console.log("ERROR NO DATA")
-
-                            }
+                            // if(res.data)
+                            // {
+                            //     console.log(res.data);
+                            //     if (res.data.errorMessage)
+                            //     {
+                            //         console.log(res.data.errorMessage)
+                            //     }
+                            //     else
+                            //     {
+                            //         console.log("DATA OK")
+                            //     }
+                            //     this.setState({getAttractionsData:true})
+                            // }
+                            // else
+                            // {
+                            //
+                            //     alert("DATA LOADED")
+                            //     this.setState({getAttractionsData:true})
+                            //     console.log("ERROR NO DATA")
+                            //
+                            // }
 
 
                         }

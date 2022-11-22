@@ -4,9 +4,9 @@ import "bootstrap/dist/css/bootstrap.css"
 import "./css/App.css"
 
 
-import AddCar from "./components/AddCar"
-import EditCar from "./components/EditCar"
-import DeleteCar from "./components/DeleteCar"
+import AddCar from "./components/others/AddCar"
+import EditCar from "./components/others/EditCar"
+import DeleteCar from "./components/others/DeleteCar"
 import DisplayAllAttractions from "./components/DisplayAllAttractions"
 import getAttractionsData from "./components/getAttractionsData";
 
