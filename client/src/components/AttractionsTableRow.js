@@ -1,5 +1,4 @@
 import React, {Component} from "react"
-import {Link} from "react-router-dom"
 
 
 export default class AttractionsTableRow extends Component
@@ -10,12 +9,14 @@ export default class AttractionsTableRow extends Component
             <tr>
                 <td>{this.props.Attractions.name}</td>
                 <td>{this.props.Attractions.url}</td>
+                <td>{this.props.Attractions.address.addressLocality}</td>
+                <td>{this.props.Attractions.address.addressRegion}</td>
+
+
+
+
                 <td>{this.props.Attractions.telephone}</td>
 
-                <td>
-                    {/*<Link className="green-button" to={"/EditCar/" + this.props.models._id}>Edit</Link>     */}
-                    {/*<Link className="red-button" to={"/DeleteCar/" + this.props.models._id}>Delete</Link>   */}
-                </td>
             </tr>
         )
     }

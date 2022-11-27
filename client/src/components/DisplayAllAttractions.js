@@ -1,7 +1,9 @@
 import React, {Component} from "react"
-import {Link, Redirect} from "react-router-dom"
+
 import axios from "axios"
+
 import AttractionsTable from "./AttractionsTable"
+
 import {SERVER_HOST} from "../config/global_constants"
 
 
@@ -16,9 +18,9 @@ export default class DisplayAllAttractions extends Component
         }
     }
     
-       
+    
     componentDidMount() 
-    {     
+    {
         axios.get(`${SERVER_HOST}/Attractions`)
         .then(res => 
         {
@@ -46,13 +48,11 @@ export default class DisplayAllAttractions extends Component
     {   
         return (           
             <div className="form-container">
-                <div className="table-container">
+
                     <AttractionsTable Attractions={this.state.Attractions} />
 
-                    {/*<div className="add-new-car">*/}
-                    {/*    <Link className="blue-button" to={"/AddCar"}>Add New Car</Link>*/}
-                    {/*</div>*/}
-                </div>
+
+
             </div> 
         )
     }

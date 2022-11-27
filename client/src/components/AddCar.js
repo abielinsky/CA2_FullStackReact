@@ -92,7 +92,6 @@ export default class AddCar extends Component
         return pattern.test(String(this.state.colour))
     }
     
-    
     validateYear()
     {    
         const year = parseInt(this.state.year)

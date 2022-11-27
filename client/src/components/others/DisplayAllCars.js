@@ -5,7 +5,7 @@ import axios from "axios"
 
 import CarTable from "./CarTable"
 
-import {SERVER_HOST} from "../config/global_constants"
+import {SERVER_HOST} from "../../config/global_constants"
 
 
 export default class DisplayAllCars extends Component 
