@@ -23,5 +23,13 @@ router.get(`/Attractions/:id`, (req, res) =>
     })
 })
 
+router.post(`/Attractions`, (req, res) =>
+{
+    AttractionsModel.create(req.body, (error, data) =>
+    {
+        res.json(data)
+    })
+})
+
 
 module.exports = router
