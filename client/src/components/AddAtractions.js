@@ -4,9 +4,7 @@ import Form from "react-bootstrap/Form"
 
 import axios from "axios"
 
-import LinkInClass from "../LinkInClass"
-
-import {SERVER_HOST} from "../../config/global_constants"
+import {SERVER_HOST} from "../config/global_constants"
 
 
 export default class AddAtractions extends Component
@@ -146,7 +144,6 @@ constructor(props)
         )
     }
 //    here u continue
-<<<<<<< Updated upstream
     render(){
 
         let errorMessage = "";
@@ -190,6 +187,4 @@ constructor(props)
             </div>
         )
     }
-=======
->>>>>>> Stashed changes
 }
