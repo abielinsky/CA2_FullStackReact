@@ -32,7 +32,7 @@ export default class DisplayAllAttractions extends Component
                 }
                 else
                 {           
-                    console.log("Records read")
+                    console.log("Records read")   
                     this.setState({Attractions: res.data})
                 }   
             }
