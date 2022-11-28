@@ -6,12 +6,11 @@ let AttractionsSchema = new mongoose.Schema(
         addressLocality: {type: String},
         addressRegion: {type: String},
         url: {type: String},
-        tags: {type: String},
-        telephone: {type: Number}
-
+        tags: {type: Array},
+        telephone: {type: Number},
     },
     {
-        collection: `attractions`
+        collection: `Attractions`
     })
 
-module.exports = mongoose.model(`attractions`, AttractionsSchema)
+module.exports = mongoose.model(`Attractions`, AttractionsSchema)
