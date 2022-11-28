@@ -13,10 +13,10 @@ import "./css/main.css"
 import DisplayAllAttractions from "./components/DisplayAllAttractions"
 import LoadAttractions from "./components/LoadAttractions";
 
-    
-export default class App extends Component 
+
+export default class App extends Component
 {
-    render() 
+    render()
     {
         return (
             <BrowserRouter>
