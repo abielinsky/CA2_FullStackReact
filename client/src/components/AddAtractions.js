@@ -4,9 +4,7 @@ import Form from "react-bootstrap/Form"
 
 import axios from "axios"
 
-import LinkInClass from "../LinkInClass"
-
-import {SERVER_HOST} from "../../config/global_constants"
+import {SERVER_HOST} from "../config/global_constants"
 
 
 export default class AddAtractions extends Component
@@ -21,8 +19,33 @@ constructor(props)
             AddressLocality:"",
             AddressRegion:"",
             price:"",
+            tags:[],
             redirectToDisplayAllAttractions:false
         }
+    }
+
+    validate = () =>
+    {
+
+    }
+
+    validateName = () =>
+    {
+        const pattern = /^[A-Za-z]+$/;
+        return pattern.test(String(this.state.model))
+    }
+
+    handleChange = (e) =>
+    {
+
+        this.setState({[e.target.name]: e.target.value,
+                            [e.target.description]: e.target.value,
+                            [e.target.AddressLocality]: e.target.value,
+                            [e.target.AddressRegion]: e.target.value,
+                            [e.target.price]: e.target.value}
+        )
+
+
     }
 
     handleSubmit = e => {
@@ -68,4 +91,47 @@ constructor(props)
     }
 
 //    here u continue
+    render(){
+
+        let errorMessage = "";
+        if(this.state.wasSubmittedAtLeastOnce)
+        {
+            errorMessage = <div className="error">Attraction Details are incorrect<br/></div>;
+        }
+
+        return(
+            <div className="form-container">
+                {this.state.redirectToDisplayAllAttractions ? <Redirect to="/DisplayAllAttractions"/> : null}
+
+                <Form>
+                    <Form.Group controlId="name">
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control type="text" name="name" value={this.state.name} onChange={this.handleChange} ref={(input) => { this.inputToFocus = input; }} />
+                    </Form.Group>
+
+                    <Form.Group controlId="description">
+                        <Form.Label>Description</Form.Label>
+                        <Form.Control type="text" name="description" value={this.state.description} onChange={this.handleChange} />
+                    </Form.Group>
+
+                    <Form.Group controlId="AddressLocality">
+                        <Form.Label>AddressLocality</Form.Label>
+                        <Form.Control type="text" name="AddressLocality" value={this.state.AddressLocality} onChange={this.handleChange} />
+                    </Form.Group>
+
+                    <Form.Group controlId="AddressRegion">
+                        <Form.Label>AddressRegion</Form.Label>
+                        <Form.Control type="text" name="AddressRegion" value={this.state.AddressRegion} onChange={this.handleChange} />
+                    </Form.Group>
+
+                    <Form.Group controlId="price">
+                        <Form.Label>Price</Form.Label>
+                        <Form.Control type="text" name="price" value={this.state.price} onChange={this.handleChange} />
+                    </Form.Group>
+
+                    <button type="submit" onClick={this.handleSubmit}>Submit</button>
+                </Form>
+            </div>
+        )
+    }
 }
