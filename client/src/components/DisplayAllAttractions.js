@@ -5,7 +5,7 @@ import axios from "axios"
 import AttractionsTable from "./AttractionsTable"
 
 import {SERVER_HOST} from "../config/global_constants"
-
+import {Link} from "react-router-dom";
 
 export default class DisplayAllAttractions extends Component
 {
@@ -46,14 +46,17 @@ export default class DisplayAllAttractions extends Component
   
     render() 
     {   
-        return (           
+        return (
+            <>
+            <Link className="" to={"/AddAttraction"}>Add</Link>
             <div className="form-container">
 
                     <AttractionsTable Attractions={this.state.Attractions} />
 
 
 
-            </div> 
+            </div>
+            </>
         )
     }
 }
