@@ -54,9 +54,9 @@ constructor(props)
 
         this.setState({ wasSubmittedAtLeastOnce: true });
 
-        const formInputsState = this.validate();
+        const FormInputsState = this.validate();
 
-        if (Object.keys(formInputsState).every(index => formInputsState[index]))
+        if (Object.keys(FormInputsState).every(index => FormInputsState[index]))
         {
             const carObject = {
                 name: this.state.name,
@@ -90,6 +90,59 @@ constructor(props)
         }
     }
 
+    render(){
+
+        let errorMessage = "";
+        if(this.state.wasSubmittedAtLeastOnce)
+        {
+            errorMessage = <div className="error">Attraction
+
+
+
+
+
+
+
+
+
+                cd Details are incorrect<br/></div>;
+        }
+
+        return(
+            <div className="form-container">
+                {this.state.redirectToDisplayAllAttractions ? <Redirect to="/DisplayAllAttractions"/> : null}
+
+                <Form>
+                <Form.Group controlId="name">
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control type="text" name="name" value={this.state.name} onChange={this.handleChange} ref={(input) => { this.inputToFocus = input; }} />
+                </Form.Group>
+                
+                <Form.Group controlId="description">
+                    <Form.Label>Description</Form.Label>
+                    <Form.Control type="text" name="description" value={this.state.description} onChange={this.handleChange} />
+                </Form.Group>
+                
+                <Form.Group controlId="AddressLocality">
+                    <Form.Label>AddressLocality</Form.Label>
+                    <Form.Control type="text" name="AddressLocality" value={this.state.AddressLocality} onChange={this.handleChange} />
+                </Form.Group>
+                
+                <Form.Group controlId="AddressRegion">
+                    <Form.Label>AddressRegion</Form.Label>
+                    <Form.Control type="text" name="AddressRegion" value={this.state.AddressRegion} onChange={this.handleChange} />
+                </Form.Group>
+                
+                <Form.Group controlId="price">
+                    <Form.Label>Price</Form.Label>
+                    <Form.Control type="text" name="price" value={this.state.price} onChange={this.handleChange} />
+                </Form.Group>
+                
+                <button type="submit" onClick={this.handleSubmit}>Submit</button>
+            </Form>
+        </div>
+        )
+    }
 //    here u continue
     render(){
 
