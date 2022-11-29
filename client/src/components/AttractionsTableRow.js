@@ -2,8 +2,8 @@ import React, {Component} from "react"
 
 
 export default class AttractionsTableRow extends Component
-{    
-    render() 
+{
+    render()
     {
         console.log(this.props)
         return (
@@ -13,7 +13,7 @@ export default class AttractionsTableRow extends Component
                 <td>{this.props.Attractions.address.addressLocality}</td>
                 <td>{this.props.Attractions.address.addressRegion}</td>
 
-                <td>{this.props.Attractions.tags.map((tag) => "||" +tag )}</td>
+                <td>{this.props.Attractions['@type'].map((tag) => "||" +tag )}</td>
 
 
                 <td>{this.props.Attractions.telephone}</td>

@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-import {Redirect, Link} from "react-router-dom"
+import {Redirect} from "react-router-dom"
 import Form from "react-bootstrap/Form"
 
 import axios from "axios"
@@ -107,41 +107,43 @@ constructor(props)
         if(this.state.wasSubmittedAtLeastOnce)
         {
             errorMessage = <div className="error">Attraction Details are incorrect<br/></div>;
+            return(errorMessage)
         }
+        else {
+            return(
+                <div className="form-container">
+                    {this.state.redirectToDisplayAllAttractions ? <Redirect to="/DisplayAllAttractions"/> : null}
 
-        return(
-            <div className="form-container">
-                {this.state.redirectToDisplayAllAttractions ? <Redirect to="/DisplayAllAttractions"/> : null}
+                    <Form>
+                        <Form.Group controlId="name">
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control type="text" name="name" value={this.state.name} onChange={this.handleChange} ref={(input) => { this.inputToFocus = input; }} />
+                        </Form.Group>
 
-                <Form>
-                    <Form.Group controlId="name">
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" name="name" value={this.state.name} onChange={this.handleChange} ref={(input) => { this.inputToFocus = input; }} />
-                    </Form.Group>
+                        <Form.Group controlId="url">
+                            <Form.Label>Website</Form.Label>
+                            <Form.Control type="text" name="url" value={this.state.url} onChange={this.handleChange}  />
+                        </Form.Group>
 
-                    <Form.Group controlId="url">
-                        <Form.Label>Website</Form.Label>
-                        <Form.Control type="text" name="url" value={this.state.url} onChange={this.handleChange}  />
-                    </Form.Group>
+                        <Form.Group controlId="AddressLocality">
+                            <Form.Label>AddressLocality</Form.Label>
+                            <Form.Control type="text" name="AddressLocality" value={this.state.AddressLocality} onChange={this.handleChange} />
+                        </Form.Group>
 
-                    <Form.Group controlId="AddressLocality">
-                        <Form.Label>AddressLocality</Form.Label>
-                        <Form.Control type="text" name="AddressLocality" value={this.state.AddressLocality} onChange={this.handleChange} />
-                    </Form.Group>
+                        <Form.Group controlId="AddressRegion">
+                            <Form.Label>AddressRegion</Form.Label>
+                            <Form.Control type="text" name="AddressRegion" value={this.state.AddressRegion} onChange={this.handleChange} />
+                        </Form.Group>
 
-                    <Form.Group controlId="AddressRegion">
-                        <Form.Label>AddressRegion</Form.Label>
-                        <Form.Control type="text" name="AddressRegion" value={this.state.AddressRegion} onChange={this.handleChange} />
-                    </Form.Group>
+                        <Form.Group controlId="tag">
+                            <Form.Label>Tag</Form.Label>
+                            <Form.Control type="text" name="tag" value={this.state.tag} onChange={this.handleChange} />
+                        </Form.Group>
 
-                    <Form.Group controlId="tag">
-                        <Form.Label>Tag</Form.Label>
-                        <Form.Control type="text" name="tag" value={this.state.tag} onChange={this.handleChange} />
-                    </Form.Group>
-
-                    <button type="submit" onClick={this.handleSubmit}>Submit</button>
-                </Form>
-            </div>
-        )
+                        <button type="submit" onClick={this.handleSubmit}>Submit</button>
+                    </Form>
+                </div>
+            )
+        }
     }
 }
