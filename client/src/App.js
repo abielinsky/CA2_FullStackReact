@@ -12,7 +12,8 @@ import "./css/main.css"
 
 import DisplayAllAttractions from "./components/DisplayAllAttractions"
 import LoadAttractions from "./components/LoadAttractions";
-import AddAtractions from "./components/AddAtractions";
+import EditAttractions from "./components/EditAttractions";
+import AddAttractions from "./components/AddAttractions";
 
 
 export default class App extends Component
@@ -24,8 +25,8 @@ export default class App extends Component
                 <Switch>
                     <Route exact path="/DisplayAllAttractions" component={DisplayAllAttractions}/>
                     <Route exact path="/LoadAttractions" component={LoadAttractions}/>
-                    <Route exact path="/AddAttraction" component={AddAtractions}/>
-
+                    <Route exact path="/AddAttractions" component={AddAttractions}/>
+                    <Route exact path="/EditAttractions" component={EditAttractions}/>
                     <Route path="*" component={DisplayAllAttractions}/>
                 </Switch>
             </BrowserRouter>

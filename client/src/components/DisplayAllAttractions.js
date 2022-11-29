@@ -48,7 +48,9 @@ export default class DisplayAllAttractions extends Component
     {   
         return (
             <>
-            <Link className="" to={"/AddAttraction"}>Add</Link>
+               <Link className="" to={"/AddAttractions"}>Add</Link>
+
+                <Link className="" to={"/EditAttractions"}>Edit</Link>
             <div className="form-container">
 
                     <AttractionsTable Attractions={this.state.Attractions} />
