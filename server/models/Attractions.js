@@ -1,5 +1,5 @@
 const mongoose = require(`mongoose`)
-const {array} = require("mongoose/lib/utils");
+const {array, object} = require("mongoose/lib/utils");
 
 let AttractionsSchema = new mongoose.Schema(
     {
@@ -8,7 +8,9 @@ let AttractionsSchema = new mongoose.Schema(
         addressRegion: {type: String},
         url: {type: String},
         tags: {type: array},
-        telephone: {type: Number}
+        telephone: {type: Number},
+        "@type": {type: array},
+        image:{type: object}
 
     },
     {

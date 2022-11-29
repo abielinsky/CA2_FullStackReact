@@ -15,18 +15,33 @@ constructor(props)
 
         this.state = {
             name:"",
-            description:"",
+            url:"",
             AddressLocality:"",
             AddressRegion:"",
-            price:"",
-            tags:[],
+            tags:"",
             redirectToDisplayAllAttractions:false
         }
     }
 
     validate = () =>
     {
+        let isValid = true;
 
+        if(this.state.name === ``)
+        {
+            isValid = false;
+        }
+
+        if(this.state.AddressLocality === ``)
+        {
+            isValid = false;
+        }
+
+        if(this.state.AddressRegion === ``)
+        {
+            isValid = false;
+        }
+        return isValid;
     }
 
     validateName = () =>
@@ -39,10 +54,10 @@ constructor(props)
     {
 
         this.setState({[e.target.name]: e.target.value,
-                            [e.target.description]: e.target.value,
+                            [e.target.url]: e.target.value,
                             [e.target.AddressLocality]: e.target.value,
                             [e.target.AddressRegion]: e.target.value,
-                            [e.target.price]: e.target.value}
+                            [e.target.tag]: e.target.value}
         )
 
 
@@ -52,44 +67,40 @@ constructor(props)
 
         e.preventDefault()
 
-        this.setState({ wasSubmittedAtLeastOnce: true });
+        let result = this.validate();
+        if (result){
 
-        const FormInputsState = this.validate();
+            this.setState({ wasSubmittedAtLeastOnce: true });
 
-        if (Object.keys(FormInputsState).every(index => FormInputsState[index]))
-        {
-            const carObject = {
-                name: this.state.name,
-                description: this.state.description,
-                AddressLocality: this.state.AddressLocality,
-                AddressRegion: this.state.AddressRegion,
-                price: this.state.price,
-                wasSubmittedAtLeastOnce: false
-            }
+            const FormInputsState = this.validate();
 
-            axios.post(`${SERVER_HOST}/Attractions`, carObject)
-                .then(res =>
-                {
-                    if(res.data)
-                    {
-                        if (res.data.errorMessage)
-                        {
-                            console.log(res.data.errorMessage)
+            if (Object.keys(FormInputsState).every(index => FormInputsState[index])) {
+                const carObject = {
+                    name: this.state.name,
+                    description: this.state.description,
+                    AddressLocality: this.state.AddressLocality,
+                    AddressRegion: this.state.AddressRegion,
+                    price: this.state.price,
+                    wasSubmittedAtLeastOnce: false
+                }
+
+                axios.post(`${SERVER_HOST}/Attractions`, carObject)
+                    .then(res => {
+                        if (res.data) {
+                            if (res.data.errorMessage) {
+                                console.log(res.data.errorMessage)
+                            } else {
+                                console.log("Record added")
+                                this.setState({redirectToDisplayAllAttractions: true})
+                            }
+                        } else {
+                            console.log("Record not added")
                         }
-                        else
-                        {
-                            console.log("Record added")
-                            this.setState({redirectToDisplayAllAttractions:true})
-                        }
-                    }
-                    else
-                    {
-                        console.log("Record not added")
-                    }
-                })
+                    })
+        }
         }
     }
-//    here u continue
+
     render(){
 
         let errorMessage = "";
@@ -108,9 +119,9 @@ constructor(props)
                         <Form.Control type="text" name="name" value={this.state.name} onChange={this.handleChange} ref={(input) => { this.inputToFocus = input; }} />
                     </Form.Group>
 
-                    <Form.Group controlId="description">
-                        <Form.Label>Description</Form.Label>
-                        <Form.Control type="text" name="description" value={this.state.description} onChange={this.handleChange} />
+                    <Form.Group controlId="url">
+                        <Form.Label>Website</Form.Label>
+                        <Form.Control type="text" name="url" value={this.state.url} onChange={this.handleChange}  />
                     </Form.Group>
 
                     <Form.Group controlId="AddressLocality">
@@ -123,9 +134,9 @@ constructor(props)
                         <Form.Control type="text" name="AddressRegion" value={this.state.AddressRegion} onChange={this.handleChange} />
                     </Form.Group>
 
-                    <Form.Group controlId="price">
-                        <Form.Label>Price</Form.Label>
-                        <Form.Control type="text" name="price" value={this.state.price} onChange={this.handleChange} />
+                    <Form.Group controlId="tag">
+                        <Form.Label>Tag</Form.Label>
+                        <Form.Control type="text" name="tag" value={this.state.tag} onChange={this.handleChange} />
                     </Form.Group>
 
                     <button type="submit" onClick={this.handleSubmit}>Submit</button>
