@@ -41,6 +41,10 @@ constructor(props)
         {
             isValid = false;
         }
+        if(this.state.tag === ``)
+        {
+            this.setState({tag : ["No tags"]})
+        }
         return isValid;
     }
 
@@ -53,14 +57,7 @@ constructor(props)
     handleChange = (e) =>
     {
 
-        this.setState({[e.target.name]: e.target.value,
-                            [e.target.url]: e.target.value,
-                            [e.target.AddressLocality]: e.target.value,
-                            [e.target.AddressRegion]: e.target.value,
-                            [e.target.tag]: e.target.value}
-        )
-
-
+        this.setState({[e.target.name]: e.target.value})
     }
 
     handleSubmit = e => {
@@ -75,16 +72,16 @@ constructor(props)
             const FormInputsState = this.validate();
 
             if (Object.keys(FormInputsState).every(index => FormInputsState[index])) {
-                const carObject = {
+                const attractionObject = {
                     name: this.state.name,
-                    description: this.state.description,
+                    url: this.state.url,
+                    address: {
                     AddressLocality: this.state.AddressLocality,
-                    AddressRegion: this.state.AddressRegion,
-                    price: this.state.price,
-                    wasSubmittedAtLeastOnce: false
+                    AddressRegion: this.state.AddressRegion},
+                    tags: this.state.tag,
                 }
 
-                axios.post(`${SERVER_HOST}/Attractions`, carObject)
+                axios.post(`${SERVER_HOST}/Attractions`, attractionObject)
                     .then(res => {
                         if (res.data) {
                             if (res.data.errorMessage) {
@@ -102,14 +99,6 @@ constructor(props)
     }
 
     render(){
-
-        let errorMessage = "";
-        if(this.state.wasSubmittedAtLeastOnce)
-        {
-            errorMessage = <div className="error">Attraction Details are incorrect<br/></div>;
-            return(errorMessage)
-        }
-        else {
             return(
                 <div className="form-container">
                     {this.state.redirectToDisplayAllAttractions ? <Redirect to="/DisplayAllAttractions"/> : null}
@@ -146,4 +135,3 @@ constructor(props)
             )
         }
     }
-}
