@@ -2,7 +2,13 @@ import React, {Component} from "react"
 
 
 export default class AttractionsTableRow extends Component
-{    
+{
+constructor(props) {
+        super(props);
+        this.state = {
+                    Attractions: this.props.Attractions,
+        }
+    }
     render() 
     {
         return (

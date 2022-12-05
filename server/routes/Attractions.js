@@ -31,5 +31,28 @@ router.post(`/Attractions`, (req, res) =>
     })
 })
 
+router.put(`/Attractions/:id`, (req, res) =>
+{
+    AttractionsModel.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, data) =>
+    {
+        res.json(data)
+    })
+})
+
+router.delete(`/Attractions/:id`, (req, res) =>
+{
+    AttractionsModel.findByIdAndDelete(req.params.id, (error, data) =>
+    {
+        res.json(data)
+    })
+})
+
+router.delete(`/ResetAttractions`, (req, res) =>
+{
+    AttractionsModel.deleteMany((error, data) =>
+    {
+        res.json(data)
+    })
+})
 
 module.exports = router
