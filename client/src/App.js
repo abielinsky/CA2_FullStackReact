@@ -28,11 +28,11 @@ export default class App extends Component
                     <Route exact path="/DisplayAllAttractions" component={DisplayAllAttractions}/>
                     <Route exact path="/LoadAttractions" component={LoadAttractions}/>
                     <Route exact path="/AddAttractions" component={AddAttractions}/>
-                    <Route exact path="/EditAttractions" component={EditAttractions}/>
+
                     <Route exact path="/ResetAttractions" component={ResetAttractions}/>
 
                     <Route exact path="/DeleteAttractions/:_id" component={DeleteAttractions}/>
-
+                    <Route exact path="/EditAttractions/:_id" component={EditAttractions}/>
 
                     <Route path="*" component={DisplayAllAttractions}/>
                 </Switch>

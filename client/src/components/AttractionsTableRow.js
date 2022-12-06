@@ -1,6 +1,6 @@
 import React, {Component} from "react"
 import {Link} from "react-router-dom";
-import {MdAddLink, MdDeleteForever} from 'react-icons/md';
+import {MdAdd, MdDeleteForever, MdEdit} from 'react-icons/md';
 
 
 
@@ -23,11 +23,15 @@ export default class AttractionsTableRow extends Component {
                     <div className="AttractionsPrimary">
 
                         <div className="Attractions__navbar">
-                            <li><Link className="green__button"
-                                      to={"/EditAttraction/" + this.props.Attractions._id}> Edit</Link>
+                            <li><Link className="red-button"
+                            to={"/EditAttractions/" + this.props.Attractions._id}>  <MdEdit/>  Edit</Link>
                             </li>
 
-                            <Link className="red-button" to={"/DeleteAttractions/" + this.props.Attractions._id}>  <MdDeleteForever/>  Delete</Link>
+                            <li> <Link className="red-button"
+                            to={"/DeleteAttractions/" + this.props.Attractions._id}>  <MdDeleteForever/>  Delete</Link> </li>
+
+
+                            <Link className="" to={"/EditAttractions"}>Edit</Link>
 
 
                         </div>

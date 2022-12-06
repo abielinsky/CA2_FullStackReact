@@ -4,7 +4,7 @@ import Form from "react-bootstrap/Form"
 import axios from "axios"
 import {SERVER_HOST} from "../config/global_constants"
 import LinkInClass from "../components/LinkInClass"
-
+import {GiCancel} from 'react-icons/gi'
 
 
 //validation data inputs using regex ?
@@ -188,7 +188,7 @@ export default class AddAttractions extends Component
             telephoneErrorMessage = <div className="error">Must contain only numbers <br/></div>
         }
         if (!this.validateTags()) {
-            TagsErrorMessage = <div className="error">names must be only letters <br/></div>
+            TagsErrorMessage = <div className="error">tag must be only letters <br/></div>
         }
 
 
