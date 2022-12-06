@@ -83,9 +83,9 @@ export default class AddAttractions extends Component
                     addressRegion: this.state.AddressRegion,
                 },
                 telephone: this.state.telephone,
-                Tags: {
-                    Tags: this.state.Tags,
-                },
+                // Tags: {
+                    tags: this.state.Tags,
+                // },
                 wasSubmittedAtLeastOnce: false
             }
 
@@ -96,7 +96,7 @@ export default class AddAttractions extends Component
                             console.log(res.data.errorMessage)
                         } else {
                             console.log("ATTRACTION added")
-                            this.setState({redirectToDisplayAllMovies: true})
+                            this.setState({redirectToDisplayAllAttractions: true})
                         }
                     } else {
                         console.log("ATTRACTION NOT ADDED")

@@ -152,13 +152,13 @@ color:pink;
     background-color: #ffa;
 }
 
-/*.table-container tbody tr:nth-child(even)*/
-/*{*/
-/*    background-color: #ffa;*/
-/*}*/
+.table-container tbody tr:nth-child(even)
+{
+    background-color: #ffa;
+}
 
-/*.add-new-car*/
-/*{*/
-/*    margin-top:1em;*/
-/*}*/
-/*!*end of table of cars *!*/
+.add-new-attractions
+{
+    margin-top:1em;
+}
+/*end of table of cars */
