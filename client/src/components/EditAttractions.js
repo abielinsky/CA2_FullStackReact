@@ -307,10 +307,10 @@ export default class EditAttractions extends Component {
                                 transition: "all 500ms ease-in-out"
                             }}>ADDRESS LOCALITY</Form.Label>
                             <Form.Control
-                                ref={(input) => {
-                                    this.inputToFocus = input;
-                                }}
                                 value={this.state.AddressLocality}
+                                // ref={(input) => {
+                                //     this.inputToFocus = input;
+                                // }}
                                 type="text"
                                 name="AddressLocality"
                                 placeholder="TYPE ADDRES LOCALITY HERE..."
