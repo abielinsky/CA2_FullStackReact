@@ -1,5 +1,7 @@
 import React, {Component} from "react"
 import {Link} from "react-router-dom";
+import {MdAddLink, MdDeleteForever} from 'react-icons/md';
+
 
 
 export default class AttractionsTableRow extends Component {
@@ -24,8 +26,9 @@ export default class AttractionsTableRow extends Component {
                             <li><Link className="green__button"
                                       to={"/EditAttraction/" + this.props.Attractions._id}> Edit</Link>
                             </li>
-                            <li><Link className="red__button" to={"/DeleteAttraction/" + this.props.Attractions._id}>
-                                Delete</Link></li>
+
+                            <Link className="red-button" to={"/DeleteAttractions/" + this.props.Attractions._id}>  <MdDeleteForever/>  Delete</Link>
+
 
                         </div>
 

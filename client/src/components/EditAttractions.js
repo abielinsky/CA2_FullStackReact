@@ -9,22 +9,37 @@ export default class EditAttractions extends Component {
 
     constructor(props) {
         super(props)
-
         this.state = {
-            name: "",
-            description: "",
-            AddressLocality: "",
-            AddressRegion: "",
-            telephone: "",
-            tags: [],
-            redirectToDisplayAllAttractions: false
+            name:"",
+            url:"",
+            AddressLocality:"",
+            AddressRegion:"",
+            telephone:"",
+            Tags: [],
+            allTags: [
+                "Activity",
+                "Walking",
+                "Gardens",
+                "Attraction",
+                "Cafe",
+                "Food _and_Drink",
+                "Historic_Houses_and_Castle",
+                "Tour",
+                "Museums_and_Attraction",
+                "Food_and_Drink",
+                "Nature and Wildlife",
+                "Learning",
+                "Abbeys and Monastery",
+                "Gallery"],
+            redirectToDisplayAllAttractions:false,
+            isTagsChecked: false,
         }
-
     }
 
 
     handleChange = (e) => {
-        this.setState({[e.target.name]: e.target.value,
+        this.setState({
+            [e.target.name]: e.target.value,
             [e.target.description]: e.target.value,
             [e.target.AddressLocality]: e.target.value,
             [e.target.AddressRegion]: e.target.value,

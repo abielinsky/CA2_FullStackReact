@@ -15,6 +15,7 @@ import LoadAttractions from "./components/LoadAttractions";
 import EditAttractions from "./components/EditAttractions";
 import AddAttractions from "./components/AddAttractions";
 import ResetAttractions from "./components/ResetAttractions";
+import DeleteAttractions from "./components/DeleteAttractions";
 
 
 export default class App extends Component
@@ -29,6 +30,10 @@ export default class App extends Component
                     <Route exact path="/AddAttractions" component={AddAttractions}/>
                     <Route exact path="/EditAttractions" component={EditAttractions}/>
                     <Route exact path="/ResetAttractions" component={ResetAttractions}/>
+
+                    <Route exact path="/DeleteAttractions/:_id" component={DeleteAttractions}/>
+
+
                     <Route path="*" component={DisplayAllAttractions}/>
                 </Switch>
             </BrowserRouter>

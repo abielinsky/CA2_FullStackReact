@@ -10,10 +10,8 @@ import LinkInClass from "../components/LinkInClass"
 //validation data inputs using regex ?
 export default class AddAttractions extends Component
 {
-    constructor(props)
-    {
+    constructor(props) {
         super(props)
-
         this.state = {
             name:"",
             url:"",
@@ -37,7 +35,8 @@ export default class AddAttractions extends Component
                 "Abbeys and Monastery",
                 "Gallery"],
 
-            redirectToDisplayAllAttractions:false
+            redirectToDisplayAllAttractions:false,
+            isTagsChecked: false,
         }
     }
 
@@ -51,21 +50,17 @@ export default class AddAttractions extends Component
     }
 
     handleTagChange = (e) => {
-
         const tag = e.target.nextSibling.textContent
         const isChecked = e.target.checked
-
         if (isChecked) {
             this.setState((prevState) => ({
                 Tags: [...prevState.Tags, tag]
             }))
             this.setState({isTagsChecked: true})
-
         } else {
             const newTags = this.state.Tags.filter((g) => g !== tag)
             this.setState({Tags: newTags})
             this.setState({isTagsChecked: false})
-
         }
         console.log(this.state.Tags)
     }
@@ -88,8 +83,9 @@ export default class AddAttractions extends Component
                     addressRegion: this.state.AddressRegion,
                 },
                 telephone: this.state.telephone,
-                Tags: this.state.Tags,
-
+                Tags: {
+                    Tags: this.state.Tags,
+                },
                 wasSubmittedAtLeastOnce: false
             }
 
@@ -380,12 +376,8 @@ export default class AddAttractions extends Component
                             }}>ATTRACTIONS TAGS</Form.Label>
 
                             <div className="Tags">
-
                                 {this.state.allTags.map((Tags) => (
-
-
                                     <div className="tick">
-
                                         <Form.Check
                                             type="checkbox"
                                             id={`default-checkbox`}
@@ -436,7 +428,7 @@ export default class AddAttractions extends Component
                             {/*<LinkInClass className="formADD-buttons"  onClick={this.handleSubmit}/>*/}
                             {/*{errorMessage}*/}
 
-                            {/*<Link className="redCancel-button" to={"/DisplayAllAttractions"}></Link>*/}
+                            <Link className="redCancel-button" to={"/DisplayAllAttractions"}></Link>
                         {/*</div>*/}
 
 
@@ -445,156 +437,6 @@ export default class AddAttractions extends Component
             </div>
         )
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // validate = () =>
-    // {
-    //     let isValid = true;
-    //
-    //     if(this.validateString)
-    //     {
-    //         isValid = false;
-    //     }
-    //
-    //     if(this.validateString)
-    //     {
-    //         isValid = false;
-    //     }
-    //
-    //     if(this.validateString)
-    //     {
-    //         isValid = false;
-    //     }
-    //
-    //     if(!this.validateTelephone){
-    //         isValid = false;
-    //     }
-    //
-    //     return isValid;
-    // }
-    //
-    // validateString = () =>
-    // {
-    //     const pattern = /^[A-Za-z]+$/;
-    //     return pattern.test(String(this.state.model))
-    // }
-    //
-    // validateTelephone = () =>
-    // {
-    //     const patternTelephone = /^(353|44)(\s*\d){9,12}$/;
-    //     return patternTelephone.test(String(this.state.telephone))
-    // }
-    //
-    // handleChange = (e) =>
-    // {
-    //
-    //     this.setState({
-    //         [e.target.name]: e.target.value ? e.target.value : "",
-    //         [e.target.url]: e.target.value ? e.target.value : "",
-    //         [e.target.AddressLocality]: e.target.value ? e.target.value : ``,
-    //         [e.target.AddressRegion]: e.target.value ? e.target.value : null,
-    //         [e.target.tag]: e.target.value ? e.target.value : []
-    //     })
-    //
-    //
-    // }
-    //
-    // handleSubmit = e => {
-    //
-    //     e.preventDefault()
-    //
-    //     let result = this.validate();
-    //     if (result){
-    //
-    //         this.setState({ wasSubmittedAtLeastOnce: true });
-    //
-    //         const FormInputsState = this.validate();
-    //
-    //         if (Object.keys(FormInputsState).every(index => FormInputsState[index])) {
-    //             const AttractionObject = {
-    //                 name: this.state.name,
-    //                 description: this.state.description,
-    //                 Address: {  AddressLocality: this.state.AddressLocality,
-    //                             AddressRegion: this.state.AddressRegion
-    //                     },
-    //                 tags: this.state.tags,
-    //                 wasSubmittedAtLeastOnce: false
-    //             }
-    //
-    //             axios.post(`${SERVER_HOST}/Attractions`, AttractionObject)
-    //                 .then(res => {
-    //                     if (res.data) {
-    //                         if (res.data.errorMessage) {
-    //                             console.log(res.data.errorMessage)
-    //                         } else {
-    //                             console.log("Record added")
-    //                             this.setState({redirectToDisplayAllAttractions: true})
-    //                         }
-    //                     } else {
-    //                         console.log("Record not added")
-    //                     }
-    //                 })
-    //     }
-    //     }
-    // }
-    //
-    // render(){
-    //     return(
-    //         <div className="form-container">
-    //             {this.state.redirectToDisplayAllAttractions ? <Redirect to="/DisplayAllAttractions"/> : null}
-    //
-    //             <Form>
-    //             <Form.Group controlId="name">
-    //                 <Form.Label>Name</Form.Label>
-    //                 <Form.Control type="text" name="name" value={this.state.name} onChange={this.handleChange} ref={(input) => { this.inputToFocus = input; }} />
-    //             </Form.Group>
-    //
-    //             <Form.Group controlId="url">
-    //                 <Form.Label>Description</Form.Label>
-    //                 <Form.Control type="text" name="url" value={this.state.url} onChange={this.handleChange} />
-    //             </Form.Group>
-    //
-    //             <Form.Group controlId="AddressLocality">
-    //                 <Form.Label>AddressLocality</Form.Label>
-    //                 <Form.Control type="text" name="AddressLocality" value={this.state.AddressLocality} onChange={this.handleChange} />
-    //             </Form.Group>
-    //
-    //             <Form.Group controlId="AddressRegion">
-    //                 <Form.Label>AddressRegion</Form.Label>
-    //                 <Form.Control type="text" name="AddressRegion" value={this.state.AddressRegion} onChange={this.handleChange} />
-    //             </Form.Group>
-    //
-    //             <Form.Group controlId="tags">
-    //                 <Form.Label>Tags</Form.Label>
-    //                 <Form.Control type="text" name="tags" value={this.state.tags} onChange={this.handleChange} />
-    //             </Form.Group>
-    //
-    //             <button type="submit" onClick={this.handleSubmit}>Submit</button>
-    //         </Form>
-    //     </div>
-    //     )
-    // }
 
 
 

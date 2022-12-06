@@ -10,7 +10,6 @@ export default class LoadAttractions extends Component
     constructor(props)
     {
         super(props)
-
         this.state = {
             displayingAttractions:false
         }

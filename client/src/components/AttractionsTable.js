@@ -18,29 +18,10 @@ export default class AttractionsTable extends Component
     {
         return (
 
-            <table>
-                <thead>
-                <tr>
-                    <th>name</th>
-                    <th>url</th>
-                    <th>address Locality</th>
-                    <th>address Region</th>
-                    <th>tags</th>
-                    <th>telephone</th>
+            <div className="container">
 
-                </tr>
-                </thead>
-
-                <tbody>
-                {this.props.Attractions.map((Attractions) => <AttractionsTableRow key={Attractions._id} Attractions={Attractions}/>)}
-                </tbody>
-            </table>
-
-
-
-
-
-
-        )
+            {this.props.Attractions.map((Attractions) => <AttractionsTableRow key={Attractions._id} Attractions={Attractions}/>)}
+            </div>
+        );
     }
 }
