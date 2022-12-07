@@ -11,9 +11,10 @@ export default class NavToDisplay extends Component {
 
                 <header className="header">
 
-                    <Link className="blue-button" to="/loadData"> Load ATTRACTIONS </Link><span>&nbsp;  | &nbsp; </span>
-                    <Link className="blue-button" to="/AddMovie">Add ATTRACTION</Link><span>&nbsp;| &nbsp;</span>
-                    <Link className="blue-button" to="/DeleteAllMovie">Delete ALL ATTRACTIONS</Link>
+                    <Link className="blue-button" to="/loadDataATTRACTIONS"> Load Data ATTRACTIONS </Link><span>&nbsp;  | &nbsp; </span>
+                    {/*<Link className="blue-button" to="/DisplayAllATTRACTIONS"> Display All ATTRACTIONS <span>| </span></Link>&nbsp;*/}
+                    <Link className="blue-button" to="/AddATTRACTIONS">Add new ATTRACTIONS</Link><span>&nbsp;| &nbsp;</span>
+                    <Link className="blue-button" to="/DeleteAllATTRACTIONS">Delete All ATTRACTIONS</Link>
 
                 </header>
                 <div className="sticky__btns">

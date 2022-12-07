@@ -58,9 +58,6 @@ export default class AttractionsTableRow extends Component {
 
                         <div className="card__footer">
 
-
-
-
                         </div>
 
 
