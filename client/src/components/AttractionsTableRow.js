@@ -15,12 +15,14 @@ export default class AttractionsTableRow extends Component {
     render() {
         return (
 
+
+
             <>
 
                 <div className="Attractions__container">
 
 
-                    <div className="AttractionsPrimary">
+                    <div className="Attractions__overlay Attractions__overlay--primary">
 
                         <div className="Attractions__navbar">
                             <li><Link className="red-button"

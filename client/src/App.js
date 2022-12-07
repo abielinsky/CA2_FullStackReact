@@ -17,7 +17,7 @@ import EditAttractions from "./components/EditAttractions";
 import AddAttractions from "./components/AddAttractions";
 import ResetAttractions from "./components/ResetAttractions";
 import DeleteAttractions from "./components/DeleteAttractions";
-
+import NavToDisplay from "./components/NavToDisplay";
 
 
 
@@ -36,6 +36,7 @@ export default class App extends Component
 
                     <Route exact path="/DeleteAttractions/:_id" component={DeleteAttractions}/>
                     <Route exact path="/EditAttractions/:_id" component={EditAttractions}/>
+                    <Route exact path="/NavToDisplay" component={NavToDisplay}/>
 
                     <Route path="*" component={DisplayAllAttractions}/>
                 </Switch>
