@@ -3,6 +3,9 @@ import ReactDOM from "react-dom"
 import "./css/index.css"
 import App from "./App"
 import * as serviceWorker from "./serviceWorker"
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 

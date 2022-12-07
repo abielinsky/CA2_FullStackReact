@@ -1,10 +1,11 @@
 import React, {Component} from "react"
 import {BrowserRouter, Switch, Route} from "react-router-dom"
 
-
 import "bootstrap/dist/css/bootstrap.css"
 import "./css/App.css"
 import "./css/main.css"
+
+import "./App.css";
 
 //import AddCar from "./components/AddCar"
 // import EditCar from "./components/EditCar"
@@ -16,6 +17,8 @@ import EditAttractions from "./components/EditAttractions";
 import AddAttractions from "./components/AddAttractions";
 import ResetAttractions from "./components/ResetAttractions";
 import DeleteAttractions from "./components/DeleteAttractions";
+
+
 
 
 export default class App extends Component

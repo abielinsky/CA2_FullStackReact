@@ -292,7 +292,7 @@ export default class AddAttractions extends Component
                                 }}
                                 type="text"
                                 name="AddressLocality"
-                                placeholder="TYPE ADDRES LOCALITY HERE..."
+                                placeholder="TYPE ADDRESS LOCALITY HERE..."
                                 onChange={this.handleChange}
                                 style={this.validateAddressLocality() ? {
                                     transition: "all 500ms ease-in-out",

@@ -37,16 +37,5 @@
   "description": "Example using a MongoDB collection with client-side and server-side validation",
   "main": "index.js",
   "author": "Derek O Reilly",
-  "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "css-loader": "^6.7.2",
-    "postcss-loader": "^7.0.2",
-    "sass": "^1.56.1",
-    "sass-loader": "^13.2.0",
-    "style-loader": "^3.3.1",
-    "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
-  }
+  "license": "ISC"
 }
