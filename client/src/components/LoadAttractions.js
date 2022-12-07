@@ -15,6 +15,12 @@ export default class LoadAttractions extends Component
         }
     }
 
+    normaliseData(data){
+        return data.map(Attractions => {
+            if (Attractions.telephone.includes("(0)")) {
+                Attractions.telephone = Attractions.telephone.replace("(0)", "")}
+            return Attractions})
+    }
 
     componentDidMount()
     {
@@ -26,8 +32,8 @@ export default class LoadAttractions extends Component
                 {
 
                     let data = JSON.parse(JSON.stringify(results))
-                    console.log(data)
 
+                    data = this.normaliseData(data)
                     axios.post(`${SERVER_HOST}/Attractions`, data)
                         .then(res =>
                         {
@@ -63,7 +69,7 @@ export default class LoadAttractions extends Component
     {
         return (
             <div>
-                {this.state.displayingAttractions ? <Redirect to="/DisplayAllAttractions"/> : null}
+                {/*{this.state.displayingAttractions ? <Redirect to="/DisplayAllAttractions"/> : null}*/}
             </div>
         )
     }
