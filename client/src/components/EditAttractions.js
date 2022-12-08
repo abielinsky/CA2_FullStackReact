@@ -5,7 +5,7 @@ import axios from "axios"
 
 import {SERVER_HOST} from "../config/global_constants"
 import {Link, Redirect} from "react-router-dom";
-import {GiCancel} from 'react-icons/gi'
+import {GiSave,GiCancel, GiTurtleShell} from 'react-icons/gi'
 import LinkInClass from "../components/LinkInClass"
 
 export default class EditAttractions extends Component {
@@ -18,7 +18,7 @@ export default class EditAttractions extends Component {
             AddressLocality: "",
             AddressRegion: "",
             telephone: "",
-            Tags: [],
+            tags: [],
             allTags: [
                 "Activity",
                 "Walking",
@@ -33,29 +33,30 @@ export default class EditAttractions extends Component {
                 "Nature and Wildlife",
                 "Learning",
                 "Abbeys and Monastery",
-                "Gallery"],
+                "Gallery",
+            ],
             redirectToDisplayAllAttractions: false,
-            isTagsChecked: false,
+            isTagsChecked: GiTurtleShell,
         }
     }
-
     componentDidMount() {
         this.inputToFocus.focus()
-
         axios.get(`${SERVER_HOST}/Attractions/${this.props.match.params._id}`)
             .then(res => {
                 if (res.data) {
                     if (res.data.errorMessage) {
-                        console.log(res.data.errorMessage)
+                        console.log(res.data.errorMessage);
                     } else {
-                        this.setState({
+                        this.setState((prevState)=>({
                             name: res.data.name,
                             url: res.data.url,
-                            AddressLocality: res.data.AddressLocality,
-                            AddressRegion: res.data.AddressRegion,
+                            AddressLocality: res.data.address.addressLocality,
+                            AddressRegion: res.data.address.addressRegion,
                             telephone: res.data.telephone,
-                            Tags: res.data.Tags
-                        })
+                            tags: res.data.tags,
+                        }));
+
+                        console.log(res.data);
                     }
                 } else {
                     console.log(`INFO NOT FOUND`)
@@ -67,42 +68,26 @@ export default class EditAttractions extends Component {
         this.setState({[e.target.name]: e.target.value})
     }
 
-    handleTagsChange = (e) => {
-
+    handleTagChange = (e) => {
         const tag = e.target.nextSibling.textContent
-
-        console.log(tag)
-
         const isChecked = e.target.checked
-        console.log(isChecked)
 
-        console.log(this.state.tags)
-        //  this.setState({tags: []})
-        console.log(this.state.tags)
+        if (this.state.tags.includes(tag) && isChecked)
+            return;
 
-        // if(this.state.tags !== null){
-        //     this.setState({tags: [] })
-        //     // this.setState((prevState) => ({
-        //     //     tags: [...prevState.tags, tag]
-        //     // }))
-        // }
-
-
-        if (isChecked) {
-            this.setState({tags: []})
+        if (isChecked){
+            //this.setState({tags: []})
             this.setState((prevState) => ({
                 tags: [...prevState.tags, tag]
             }))
-
             this.setState({isTagsChecked: true})
         } else {
-            const newTag = this.state.tags.filter((g) => g !== tag)
-            this.setState({tags: newTag})
+            const newTags = this.state.tags.filter((g) => g !== tag)
+            this.setState({tags: newTags})
             this.setState({isTagsChecked: false})
         }
-        console.log(this.state.tags)
+        //console.log(this.state.tags)
     }
-
 
     handleSubmit = (e) => {
         e.preventDefault()
@@ -112,17 +97,19 @@ export default class EditAttractions extends Component {
         const formInputsState = this.validate()
 
         if (Object.keys(formInputsState).every(index => formInputsState[index])) {
+
             const AtractionsObject = {
                 name: this.state.name,
                 url: this.state.url,
-                AddressLocality: this.state.AddressLocality,
-                AddressRegion: this.state.AddressRegion,
+                address: {
+                    addressLocality: this.state.AddressLocality,
+                    addressRegion: this.state.AddressRegion,
+                },
                 telephone: this.state.telephone,
-                Tags: this.state.Tags,
-
+                tags: this.state.tags,
+                __v: 0,
             }
-
-            axios.put(`${SERVER_HOST}/Atractions/${this.props.match.params._id}`, AtractionsObject)
+            axios.put(`${SERVER_HOST}/Attractions/${this.props.match.params._id}`, AtractionsObject)
                 .then(res => {
                     if (res.data) {
                         if (res.data.errorMessage) {
@@ -139,7 +126,7 @@ export default class EditAttractions extends Component {
     }
 
     validateName() {
-        const pattern = /^[0-9a-zA-Z !@%£$?+\s]+$/
+        const pattern = /^[a-zA-Z \s]+$/
         return pattern.test(String(this.state.name))
     }
 
@@ -159,7 +146,7 @@ export default class EditAttractions extends Component {
     }
 
     validatetelephone() {
-        const pattern = /^[0-9]+$/
+        const pattern = /^[+0-9]+$/
         return pattern.test(String(this.state.telephone))
     }
 
@@ -176,11 +163,16 @@ export default class EditAttractions extends Component {
             AddressLocality: this.validateAddressLocality(),
             AddressRegion: this.validateAddressRegion(),
             telephone: this.validatetelephone(),
-            Tags: this.validateTags(),
-
+            tags: this.validateTags(),
         }
     }
 
+    setCheckedValue(tag)
+    {
+        var isChecked=this.state.tags.includes(tag);
+        console.log(tag, isChecked);
+        return isChecked;
+    }
     render() {
 
         let nameErrorMessage = ""
@@ -220,7 +212,7 @@ export default class EditAttractions extends Component {
                         ATTRACTIONS <span>| </span></Link>&nbsp;
                     <Link className="blue-button" to="/AddATTRACTIONS">Add new
                         ATTRACTIONS</Link><span>&nbsp;| &nbsp;</span>
-                    <Link className="blue-button" to="/DeleteAllATTRACTIONS">Delete All ATTRACTIONS</Link>
+                    <Link className="blue-button" to="/ResetAttractions">Delete All ATTRACTIONS</Link>
 
                 </header>
 
@@ -308,9 +300,9 @@ export default class EditAttractions extends Component {
                             }}>ADDRESS LOCALITY</Form.Label>
                             <Form.Control
                                 value={this.state.AddressLocality}
-                                // ref={(input) => {
-                                //     this.inputToFocus = input;
-                                // }}
+                                ref={(input) => {
+                                    this.inputToFocus = input;
+                                }}
                                 type="text"
                                 name="AddressLocality"
                                 placeholder="TYPE ADDRES LOCALITY HERE..."
@@ -394,17 +386,17 @@ export default class EditAttractions extends Component {
                                 textShadow: "0 0 7px white",
                                 transition: "all 500ms ease-in-out"
                             }}>ATTRACTIONS TAGS</Form.Label>
-
-                            <div className="Tags">
-                                {this.state.allTags.map((Tags) => (
-                                    <div className="tick">
+                            <br/>
+                            <div className="Tags" style={{textAlign: "left"}}>
+                                {this.state.allTags.map((tag) => (
+                                    <div className="tick" key={tag}>
                                         <Form.Check
                                             type="checkbox"
-                                            id={`default-checkbox`}
-                                            label={Tags}
+                                            defaultChecked={this.setCheckedValue(tag)}
+                                            // id={`default-checkbox`}
+                                            label={tag}
                                             className="form__check"
-                                            placeholder="ENTER Tags..."
-                                            onChange={this.handleTagChange}
+                                            //onChange={this.handleTagChange}
                                             style={this.validateTags() ? {
                                                 transition: "all 500ms ease-in-out",
                                                 boxShadow: "0 0 3px greenyellow",
@@ -431,26 +423,25 @@ export default class EditAttractions extends Component {
                                 }}>TAGS ADDED</h6>
                                 <div className="added__TAGS" style={{width: "100%", color: "greenyellow"}}>
 
-                                    {this.state.Tags.map(g => <div className="Tags__value" style={{
-                                        transition: "all 500ms ease-in-out",
-                                        boxShadow: "0 0 3px greenyellow",
-                                        background: "transparent",
-                                        borderRadius: "3px"
-                                    }}>{g}</div>)}
+                                    {this.state.tags.map(g =>
+                                        <div className="Tags__value"
+                                             key={g}
+                                             style={{
+                                                 transition: "all 500ms ease-in-out",
+                                                 boxShadow: "0 0 3px greenyellow",
+                                                 background: "transparent",
+                                                 borderRadius: "3px"
+                                             }}>{g}
+                                        </div>
+                                    )}
                                 </div>
                             </div> : null}
-
-
 
                         </Form.Group>
                         {TagsErrorMessage}
 
-
-                        <button type="submit" onClick={this.handleSubmit}>Submit</button>
+                        <button className="redCancel-button" type="submit" onClick={this.handleSubmit}><GiSave/></button>
                         {/*<LinkInClass className="formADD-buttons"  onClick={this.handleSubmit}/>*/}
-
-
-
                         <Link className="redCancel-button" to={"/DisplayAllAttractions"}><GiCancel/></Link>
                         {/*</div>*/}
 
@@ -460,16 +451,6 @@ export default class EditAttractions extends Component {
             </div>
         )
     }
-
-
-
-
-
-
-
-
-
-
 
 
 }

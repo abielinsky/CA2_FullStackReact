@@ -4,8 +4,6 @@ import axios from "axios"
 import {SERVER_HOST} from '../config/global_constants'
 
 
-
-
 export default class getAttractionsData extends Component
 {
     constructor(props) {
@@ -23,9 +21,9 @@ export default class getAttractionsData extends Component
         axios.get(url)
             .then(res => res.data.Attractions)
             .then(results => {
-                    console.log(results)
-                    let data = JSON.parse(JSON.stringify(results))
-                    console.log(data)
+                console.log(results)
+                let data = JSON.parse(JSON.stringify(results))
+                console.log(data)
 
                 axios.post(`${SERVER_HOST}/Attractions`, data)
                     .then(res =>
@@ -58,7 +56,7 @@ export default class getAttractionsData extends Component
 
 
 
-                })
+            })
 
 
 

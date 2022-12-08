@@ -9,7 +9,7 @@ export default class AttractionsTableRow extends Component {
     constructor(props) {
         super(props);
         this.state = {
-                    Attractions: this.props.Attractions,
+            Attractions: this.props.Attractions,
         }
     }
     render() {
@@ -26,11 +26,11 @@ export default class AttractionsTableRow extends Component {
 
                         <div className="Attractions__navbar">
                             <li><Link className="red-button"
-                            to={"/EditAttractions/" + this.props.Attractions._id}>  <MdEdit/>  Edit</Link>
+                                      to={"/EditAttractions/" + this.props.Attractions._id}>  <MdEdit/>  Edit</Link>
                             </li>
 
                             <li> <Link className="red-button"
-                            to={"/DeleteAttractions/" + this.props.Attractions._id}>  <MdDeleteForever/>  Delete</Link> </li>
+                                       to={"/DeleteAttractions/" + this.props.Attractions._id}>  <MdDeleteForever/>  Delete</Link> </li>
 
                         </div>
 
@@ -52,7 +52,7 @@ export default class AttractionsTableRow extends Component {
                                 fontStyle: "normal",
                                 fontWeight: "bold"
                             }}>Tags: </span>  {this.props.Attractions.tags.join(' | ')} </p>
-                                {/*{this.props.Attractions.tags.map((tag) => "|" + tag)}  */}
+                            {/*{this.props.Attractions.tags.map((tag) => "|" + tag)}  */}
                         </div>
 
 

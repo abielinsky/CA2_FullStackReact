@@ -14,13 +14,11 @@ export default class AttractionsTable extends Component
     }
 
 
-    render() 
+    render()
     {
         return (
-
             <div className="container">
-
-            {this.props.Attractions.map((Attractions) => <AttractionsTableRow key={Attractions._id} Attractions={Attractions}/>)}
+                {this.props.Attractions.map((attraction) => <AttractionsTableRow key={attraction._id} Attractions={attraction}/>)}
             </div>
         );
     }

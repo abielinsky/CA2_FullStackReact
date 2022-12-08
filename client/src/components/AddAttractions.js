@@ -10,6 +10,7 @@ import {GiCancel} from 'react-icons/gi'
 //validation data inputs using regex ?
 export default class AddAttractions extends Component
 {
+
     constructor(props) {
         super(props)
         this.state = {
@@ -83,9 +84,7 @@ export default class AddAttractions extends Component
                     addressRegion: this.state.AddressRegion,
                 },
                 telephone: this.state.telephone,
-                // Tags: {
-                    tags: this.state.Tags,
-                // },
+                tags: this.state.Tags,
                 wasSubmittedAtLeastOnce: false
             }
 
@@ -122,7 +121,7 @@ export default class AddAttractions extends Component
         return pattern.test(String(this.state.AddressRegion))
     }
     validatetelephone() {
-        const pattern = /^[0-9]+$/
+        const pattern = /^[A-Za-z,;:/_.!?@ \-0-9\s]+$/
         return pattern.test(String(this.state.telephone))
     }
     validateTags() {
@@ -149,11 +148,6 @@ export default class AddAttractions extends Component
         }
 
     }
-
-
-
-
-
 
     render() {
         let errorMessage = ""
@@ -187,9 +181,9 @@ export default class AddAttractions extends Component
         if (!this.validatetelephone()) {
             telephoneErrorMessage = <div className="error">Must contain only numbers <br/></div>
         }
-        if (!this.validateTags()) {
-            TagsErrorMessage = <div className="error">tag must be only letters <br/></div>
-        }
+        // if (!this.validateTags()) {
+        //     TagsErrorMessage = <div className="error">tag must be only letters <br/></div>
+        // }
 
 
         return (
@@ -200,7 +194,7 @@ export default class AddAttractions extends Component
                     <Link className="blue-button" to="/loadDataATTRACTIONS"> Load Data ATTRACTIONS </Link><span>&nbsp;  | &nbsp; </span>
                     <Link className="blue-button" to="/DisplayAllATTRACTIONS"> Display All ATTRACTIONS <span>| </span></Link>&nbsp;
                     <Link className="blue-button" to="/AddATTRACTIONS">Add new ATTRACTIONS</Link><span>&nbsp;| &nbsp;</span>
-                    <Link className="blue-button" to="/DeleteAllATTRACTIONS">Delete All ATTRACTIONS</Link>
+                    <Link className="blue-button" to="/ResetAttractions">Delete All ATTRACTIONS</Link>
 
                 </header>
 
@@ -424,11 +418,11 @@ export default class AddAttractions extends Component
                         {TagsErrorMessage}
 
                         {/*<div className="form__footer">*/}
-                            <button type="submit" onClick={this.handleSubmit}>Submit</button>
-                            {/*<LinkInClass className="formADD-buttons"  onClick={this.handleSubmit}/>*/}
-                            {/*{errorMessage}*/}
+                        <button type="submit" onClick={this.handleSubmit}>Submit</button>
+                        {/*<LinkInClass className="formADD-buttons"  onClick={this.handleSubmit}/>*/}
+                        {/*{errorMessage}*/}
 
-                            <Link className="redCancel-button" to={"/DisplayAllAttractions"}></Link>
+                        <Link className="redCancel-button" to={"/DisplayAllAttractions"}></Link>
                         {/*</div>*/}
 
 

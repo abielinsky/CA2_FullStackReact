@@ -29,7 +29,7 @@ export default class App extends Component
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/DisplayAllAttractions" component={DisplayAllAttractions}/>
-                    <Route exact path="/LoadAttractions" component={LoadAttractions}/>
+                    <Route exact path="/loadDataATTRACTIONS" component={LoadAttractions}/>
                     <Route exact path="/AddAttractions" component={AddAttractions}/>
 
                     <Route exact path="/ResetAttractions" component={ResetAttractions}/>

@@ -24,15 +24,15 @@ export default class LoadAttractions extends Component
 
     componentDidMount()
     {
-        let url = 'https://raw.githubusercontent.com/abielinsky/CA2_FullStackReact/2307aee50d78eff3a7a235fdd97df7422df1e253/data/data.json?token=GHSAT0AAAAAAB27LPVMKSMIYQ746GQCDUG6Y4P7UQQ'
 
-        axios.get(url)
-            .then( res =>res.data)
+        //let url = 'https://raw.githubusercontent.com/abielinsky/CA2_FullStackReact/2307aee50d78eff3a7a235fdd97df7422df1e253/data/data.json?token=GHSAT0AAAAAAB27LPVMKSMIYQ746GQCDUG6Y4P7UQQ'
+        //axios.get(url)
+        let url=`${process.env.PUBLIC_URL}/data.json`;
+        fetch(url)
+            .then(res => res.json()) //.then( res =>res.data)
             .then (results =>
                 {
-
                     let data = JSON.parse(JSON.stringify(results))
-
                     data = this.normaliseData(data)
 
                     axios.post(`${SERVER_HOST}/Attractions`, data)
@@ -70,6 +70,7 @@ export default class LoadAttractions extends Component
     {
         return (
             <div>
+                <h5>hello</h5>
                 {this.state.displayingAttractions ? <Redirect to="/DisplayAllAttractions"/> : null}
             </div>
         )
@@ -82,3 +83,10 @@ export default class LoadAttractions extends Component
 
 
 }
+
+
+
+
+
+
+

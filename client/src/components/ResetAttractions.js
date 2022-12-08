@@ -17,26 +17,26 @@ export default class ResetAttractions extends Component
     componentDidMount()
     {
         axios.delete(`${SERVER_HOST}/ResetAttractions`)
-        .then(res =>
-        {
-            if(res.data)
+            .then(res =>
             {
-                console.log(res.data)
-                if (res.data.errorMessage)
+                if(res.data)
                 {
-                    console.log(res.data.errorMessage)
+                    console.log(res.data)
+                    if (res.data.errorMessage)
+                    {
+                        console.log(res.data.errorMessage)
+                    }
+                    else
+                    {
+                        console.log("Records reset")
+                        this.setState({redirectToDisplayAllAttractions:true})
+                    }
                 }
                 else
                 {
-                    console.log("Records reset")
-                    this.setState({redirectToDisplayAllAttractions:true})
+                    console.log("Record not found")
                 }
-            }
-            else
-            {
-                console.log("Record not found")
-            }
-        })
+            })
     }
 
     render()

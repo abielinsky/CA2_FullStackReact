@@ -7,7 +7,7 @@ let AttractionsSchema = new mongoose.Schema(
         url: {type: String},
         tags: {type: Array},
         telephone: {type: String},
-        geo: {latitude: {type: Number}, longitude: {type: Number}},
+        geo: {type: Object}
 
     },
     {
