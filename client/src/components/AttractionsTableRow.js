@@ -14,25 +14,17 @@ export default class AttractionsTableRow extends Component {
     }
     render() {
         return (
+            <div>
 
 
 
-            <>
-
-                <div className="Attractions__container">
 
 
-                    <div className="Attractions__overlay Attractions__overlay--primary">
 
-                        <div className="Attractions__navbar">
-                            <li><Link className="red-button"
-                                      to={"/EditAttractions/" + this.props.Attractions._id}>  <MdEdit/>  Edit</Link>
-                            </li>
-
-                            <li> <Link className="red-button"
-                                       to={"/DeleteAttractions/" + this.props.Attractions._id}>  <MdDeleteForever/>  Delete</Link> </li>
-
-                        </div>
+                <div className=" attraction-image">
+                    <img src={require(`./ImagesAttraction/${this.props.Attractions.address.addressLocality}.jpg`)}/>
+                    {/*alt={this.props.Attractions.address.addressLocality}*/}
+                </div>
 
 
                         <div className="Attractions__name">{this.props.Attractions.name}</div>
@@ -55,19 +47,19 @@ export default class AttractionsTableRow extends Component {
                             {/*{this.props.Attractions.tags.map((tag) => "|" + tag)}  */}
                         </div>
 
+                            <li><Link className="red-button"
+                                      to={"/EditAttractions/" + this.props.Attractions._id}>  <MdEdit/>  Edit</Link>
+                            </li>
 
-                        <div className="card__footer">
-
-                        </div>
-
-
-
-                    </div>
+                            <li> <Link className="red-button"
+                                       to={"/DeleteAttractions/" + this.props.Attractions._id}>  <MdDeleteForever/>  Delete</Link> </li>
 
 
-                </div>
 
-            </>
+            </div>
+
+
+
 
         )
     }

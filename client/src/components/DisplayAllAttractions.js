@@ -29,18 +29,7 @@ export default class DisplayAllAttractions extends Component {
                     console.log("Records read");
                     this.setState({ Attractions: res.data });
 
-                    // this.setState({Attractions: res.data.results});
-                    // //////////GET LIST OF UNIQUE REGIONS/////////////////
-                    // let IrishRegions = res.data.results.map(attraction => attraction.address.addressRegion);
-                    // let uniqueRegions = [...new Set(IrishRegions)].sort();
-                    //
-                    //
-                    // /////ADD "ALL REGIONS" TO THE FRONT OF THE ARRAY/////
-                    // uniqueRegions.unshift("Irish Attractions");
-                    // console.log(IrishRegions);
-                    // console.log(uniqueRegions);
-                    // this.setState({selectedAttractions: res.data.results});
-                    // this.setState({addressRegion: uniqueRegions});
+
                 }
             } else {
                 console.log(this.state.isRecords);
@@ -187,19 +176,43 @@ export default class DisplayAllAttractions extends Component {
         return (
             <div id="form-container">
                 <header className="header">
-                    <Link className="blue-button" to="/loadDataATTRACTIONS">
-                        {" "}
-                        Load Data ATTRACTIONS{" "}
-                    </Link>
-                    <span>&nbsp; | &nbsp; </span>
-                    <Link className="blue-button" to="/AddATTRACTIONS">
-                        Add new ATTRACTIONS
-                    </Link>
-                    <span>&nbsp;| &nbsp;</span>
-                    <Link className="blue-button" to="/ResetAttractions">
-                        Delete All ATTRACTIONS
-                    </Link>
+                    <div id="topbar" className="hide-s hide-m">
+
+                    </div>
+                    <nav>
+
+                        <div className="line">
+                            <div className="top-nav s-12 l-10">
+                                <input id="search" type="text" placeholder="     Search" onChange= {this.handleSearch}/>
+                                <ul className="right">
+                                    <li className="active-item"><a href="#carousel">Home</a></li>
+                                    <li><a href="#features">Features</a></li>
+                                    <li><a href="#about-us">About Us</a></li>
+                                    <li><a href="#our-work">Our Work</a></li>
+                                    <li><a href="#services">Services</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </nav>
                 </header>
+
+
+                 <div id="bodydiv">
+                <Link className="blue-button" to="/loadDataATTRACTIONS">
+                    {" "}
+                    Load Data ATTRACTIONS{" "}
+                </Link>
+                <span>&nbsp; | &nbsp; </span>
+                <Link className="blue-button" to="/AddATTRACTIONS">
+                    Add new ATTRACTIONS
+                </Link>
+                <span>&nbsp;| &nbsp;</span>
+                <Link className="blue-button" to="/ResetAttractions">
+                    Delete All ATTRACTIONS
+                </Link>
 
                 <div className="sticky__btns">
                     <div id="sortingDiv">
@@ -231,17 +244,13 @@ export default class DisplayAllAttractions extends Component {
                         </select>
                     </div>
                     <br />
-                    <input
-                        id="search"
-                        type="text"
-                        placeholder="Search"
-                        onChange={this.handleSearch}
-                    />
+
                 </div>
 
                 <div className="form-container">
                     <AttractionsTable Attractions={this.state.Attractions} />
                 </div>
+            </div>
             </div>
         );
     }
