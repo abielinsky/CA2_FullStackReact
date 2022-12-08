@@ -386,17 +386,17 @@ export default class EditAttractions extends Component {
                                 textShadow: "0 0 7px white",
                                 transition: "all 500ms ease-in-out"
                             }}>ATTRACTIONS TAGS</Form.Label>
-                            <br/>
-                            <div className="Tags" style={{textAlign: "left"}}>
-                                {this.state.allTags.map((tag) => (
-                                    <div className="tick" key={tag}>
+
+                            <div className="Tags">
+                                {this.state.allTags.map((Tags) => (
+                                    <div className="tick">
                                         <Form.Check
                                             type="checkbox"
-                                            defaultChecked={this.setCheckedValue(tag)}
-                                            // id={`default-checkbox`}
-                                            label={tag}
+                                            id={`default-checkbox`}
+                                            label={Tags}
                                             className="form__check"
-                                            //onChange={this.handleTagChange}
+                                            placeholder="ENTER Tags..."
+                                            onChange={this.handleTagChange}
                                             style={this.validateTags() ? {
                                                 transition: "all 500ms ease-in-out",
                                                 boxShadow: "0 0 3px greenyellow",
@@ -423,21 +423,22 @@ export default class EditAttractions extends Component {
                                 }}>TAGS ADDED</h6>
                                 <div className="added__TAGS" style={{width: "100%", color: "greenyellow"}}>
 
-                                    {this.state.tags.map(g => 
-                                    <div className="Tags__value" 
-                                        key={g} 
-                                        style={{
-                                        transition: "all 500ms ease-in-out",
-                                        boxShadow: "0 0 3px greenyellow",
-                                        background: "transparent",
-                                        borderRadius: "3px"
-                                        }}>{g}
-                                    </div>
+                                    {this.state.tags.map(g =>
+                                        <div className="Tags__value"
+                                             key={g}
+                                             style={{
+                                                 transition: "all 500ms ease-in-out",
+                                                 boxShadow: "0 0 3px greenyellow",
+                                                 background: "transparent",
+                                                 borderRadius: "3px"
+                                             }}>{g}
+                                        </div>
                                     )}
                                 </div>
                             </div> : null}
 
                         </Form.Group>
+
                         {TagsErrorMessage}
 
                         <button className="redCancel-button" type="submit" onClick={this.handleSubmit}><GiSave/></button>
