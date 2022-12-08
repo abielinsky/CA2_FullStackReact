@@ -7,8 +7,8 @@ let AttractionsSchema = new mongoose.Schema(
         url: {type: String},
         tags: {type: Array},
         telephone: {type: String},
-        geo: {type: Object}
-
+        geo: {type: Object},
+        "@type": {type: Object},
     },
     {
         collection: `Attractions`

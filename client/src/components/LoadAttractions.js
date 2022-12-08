@@ -25,7 +25,7 @@ export default class LoadAttractions extends Component
     componentDidMount()
     {
 
-        //let url = 'https://raw.githubusercontent.com/abielinsky/CA2_FullStackReact/2307aee50d78eff3a7a235fdd97df7422df1e253/data/data.json?token=GHSAT0AAAAAAB27LPVMKSMIYQ746GQCDUG6Y4P7UQQ'
+        //let url = 'https://raw.githubusercontent.com/abielinsky/CA2_FullStackReact/2307aee50d78eff3a7a235fdd97df7422df1e253/data/data.json?token=GHSAT0AAAAAAB27LPVMKSMIYQ746GQCDUG6Y4P7UQQ'        
         //axios.get(url)
         let url=`${process.env.PUBLIC_URL}/data.json`;
         fetch(url)
@@ -83,10 +83,3 @@ export default class LoadAttractions extends Component
 
 
 }
-
-
-
-
-
-
-

@@ -19,7 +19,7 @@ app.use(require(`./routes/Attractions`))
 
 
 // Port
-app.listen(process.env.SERVER_PORT, () =>
+app.listen(process.env.SERVER_PORT, () => 
 {
     console.log(`Connected to port ` + process.env.SERVER_PORT)
 })
@@ -32,7 +32,7 @@ app.use((req, res, next) => {next(createError(404))})
 app.use(function (err, req, res, next)
 {
     console.error(err.message)
-    if (!err.statusCode)
+    if (!err.statusCode) 
     {
         err.statusCode = 500
     }

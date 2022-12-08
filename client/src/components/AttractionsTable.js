@@ -14,7 +14,7 @@ export default class AttractionsTable extends Component
     }
 
 
-    render()
+    render() 
     {
         return (
             <div className="container">

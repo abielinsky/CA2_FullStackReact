@@ -33,7 +33,7 @@ export default class EditAttractions extends Component {
                 "Nature and Wildlife",
                 "Learning",
                 "Abbeys and Monastery",
-                "Gallery",
+                "Gallery", 
             ],
             redirectToDisplayAllAttractions: false,
             isTagsChecked: GiTurtleShell,
@@ -55,7 +55,7 @@ export default class EditAttractions extends Component {
                             telephone: res.data.telephone,
                             tags: res.data.tags,
                         }));
-
+                        
                         console.log(res.data);
                     }
                 } else {
@@ -126,7 +126,7 @@ export default class EditAttractions extends Component {
     }
 
     validateName() {
-        const pattern = /^[a-zA-Z \s]+$/
+        const pattern = /^[0-9a-zA-Z !@%£$?+\s]+$/
         return pattern.test(String(this.state.name))
     }
 
@@ -146,7 +146,7 @@ export default class EditAttractions extends Component {
     }
 
     validatetelephone() {
-        const pattern = /^[+0-9]+$/
+        const pattern = /^[0-9]+$/
         return pattern.test(String(this.state.telephone))
     }
 
@@ -423,16 +423,16 @@ export default class EditAttractions extends Component {
                                 }}>TAGS ADDED</h6>
                                 <div className="added__TAGS" style={{width: "100%", color: "greenyellow"}}>
 
-                                    {this.state.tags.map(g =>
-                                        <div className="Tags__value"
-                                             key={g}
-                                             style={{
-                                                 transition: "all 500ms ease-in-out",
-                                                 boxShadow: "0 0 3px greenyellow",
-                                                 background: "transparent",
-                                                 borderRadius: "3px"
-                                             }}>{g}
-                                        </div>
+                                    {this.state.tags.map(g => 
+                                    <div className="Tags__value" 
+                                        key={g} 
+                                        style={{
+                                        transition: "all 500ms ease-in-out",
+                                        boxShadow: "0 0 3px greenyellow",
+                                        background: "transparent",
+                                        borderRadius: "3px"
+                                        }}>{g}
+                                    </div>
                                     )}
                                 </div>
                             </div> : null}
@@ -451,6 +451,16 @@ export default class EditAttractions extends Component {
             </div>
         )
     }
+
+
+
+
+
+
+
+
+
+
 
 
 }
