@@ -16,56 +16,41 @@ export default class AttractionsTableRow extends Component {
         return (
 
 
-
-            <>
-
-                <div className="Attractions__container">
-                    {/* <div className="Attractions__overlay Attractions__overlay--primary"> */}
-                    <div className="card">
-                        <div className="Attractions__navbar">
-                            <li><Link className="red-button"
-                            to={"/EditAttractions/" + this.props.Attractions._id}>  <MdEdit/>  Edit</Link>
-                            </li>
-
-                            <li> <Link className="red-button"
-                            to={"/DeleteAttractions/" + this.props.Attractions._id}>  <MdDeleteForever/>  Delete</Link> </li>
-
-                        </div>
+                <div id="irishAttraction">
+               <img className=" attraction-image"
+                        src={require(`./Images1/${this.props.Attractions.address.addressLocality}.jpg`)}/>
 
 
-                        <div className="Attractions__name">{this.props.Attractions.name}</div>
+                   <h4 className="Attractions__name">{this.props.Attractions.name}</h4>
 
-                        <div className="Attractions__url">{this.props.Attractions.url}</div>
+                     {/*<p className="Attractions__url">{this.props.Attractions.url}</p>*/}
 
-                        <div className="Attractions__addressLocality">{this.props.Attractions.address.addressLocality}</div>
+                     <p className="Attractions__addressLocality">{this.props.Attractions.address.addressLocality}</p>
 
-                        <div className="Attractions__addressRegion">{this.props.Attractions.address.addressRegion}</div>
+                     <p className="Attractions__addressRegion">{this.props.Attractions.address.addressRegion}</p>
 
-                        <div className="Attractions__telephone">{this.props.Attractions.telephone}</div>
+                       <p className="Attractions__telephone">{this.props.Attractions.telephone}</p>
 
 
-                        <div className="Attractions_Tags">
                             <p><span style={{
                                 color: "grey",
                                 fontStyle: "normal",
                                 fontWeight: "bold"
                             }}>Tags: </span>  {this.props.Attractions.tags.join(' | ')} </p>
-                                {/*{this.props.Attractions.tags.map((tag) => "|" + tag)}  */}
-                        </div>
+
+                            <div id ="alignButton">
+                           <Link className= "buttonEdit"
+                                      to={"/EditAttractions/" + this.props.Attractions._id}><MdEdit/>Edit</Link>
+
+                             <Link className="buttonDelete"
+                                       to={"/DeleteAttractions/" + this.props.Attractions._id}><MdDeleteForever/>Delete</Link>
 
 
-                        <div className="card__footer">
-
-                        </div>
 
 
-
-                    </div>
-
-
+                            </div>
                 </div>
 
-            </>
 
         )
     }

@@ -45,18 +45,6 @@ export default class DisplayAllAttractions extends Component {
             AllAttractions: res.data
           });
 
-          // this.setState({Attractions: res.data.results});
-          // //////////GET LIST OF UNIQUE REGIONS/////////////////
-          // let IrishRegions = res.data.results.map(attraction => attraction.address.addressRegion);
-          // let uniqueRegions = [...new Set(IrishRegions)].sort();
-          //
-          //
-          // /////ADD "ALL REGIONS" TO THE FRONT OF THE ARRAY/////
-          // uniqueRegions.unshift("Irish Attractions");
-          // console.log(IrishRegions);
-          // console.log(uniqueRegions);
-          // this.setState({selectedAttractions: res.data.results});
-          // this.setState({addressRegion: uniqueRegions});
         }
       } else {
         console.log(this.state.isRecords);
@@ -73,13 +61,8 @@ export default class DisplayAllAttractions extends Component {
     this.setState({ });
   }
 
-  // getTags() {
-  //   let tags = [];
-  //   this.state.Attractions.map((Attractions) =>
-  //     tags.push.apply(tags, Attractions.tags)
-  //   );
-  //   return [...new Set(tags)].sort();
-  // }
+
+
 
   /// CODE TO SORT IN ASCENDING AND DESCENDING ORDER BY NAME///
 
@@ -110,6 +93,7 @@ export default class DisplayAllAttractions extends Component {
       //ALL REGIONS///
       this.setState({ selectedAttractions: Database });
     } //// IRISH ATTRACTION FROM ONE REGION////
+
     else {
       this.setState({
         selectedAttractions: Database.filter(
@@ -118,6 +102,7 @@ export default class DisplayAllAttractions extends Component {
       });
     }
   };
+
   /// CODE TO SORT IN ASCENDING AND DESCENDING ORDER BY ADDRESS REGION///
 
   handleAddressRegionClick = (e) => {
@@ -174,35 +159,6 @@ export default class DisplayAllAttractions extends Component {
     }
   };
 
-  //===========
-  //NOT WORKING, NEED TO CHECK HOW TO SORT AND FILTER THE TAGS
-  //===========
-  // handleTapClick = (e) => {
-  //   if (e.target.value === "Ascending") {
-  //     /// SORT IN ASCENDING ORDER///
-  //     this.setState({
-  //       Attractions: this.state.Attractions.sort((a, b) =>
-  //         a.tags.filter(
-  //           (tag) =>
-  //             tag.includes(e.target.value) -
-  //             b.tags.some((tag) => tag.includes(e.target.value))
-  //         )
-  //       ),
-  //     });
-  //   } else {
-  //     /// SORT IN DESCENDING ORDER///
-  //     this.setState({
-  //       Attractions: this.state.Attractions.sort((a, b) =>
-  //         b.tags.filter(
-  //           (tag) =>
-  //             tag.includes(e.target.value) -
-  //             a.tags.some((tag) => tag.includes(e.target.value))
-  //         )
-  //       ),
-  //     });
-  //   }
-  // };
-
   handleSearch = (e) => {
     const search = e.target.value.toLowerCase().trim();
     if (search == "") {
@@ -214,12 +170,12 @@ export default class DisplayAllAttractions extends Component {
       Attractions: this.state.Attractions.filter(
         (attractions) =>
           attractions.name.toLowerCase().includes(search) ||
-          // attractions.address.addressLocality.toLowerCase().includes(search) ||
-          // attractions.address.addressRegion.toLowerCase().includes(search) ||
+          attractions.address.addressLocality.toLowerCase().includes(search) ||
+          attractions.address.addressRegion.toLowerCase().includes(search) ||
           attractions.telephone.toLowerCase().includes(search)
-        // || attractions.tags.some((tag) =>
-        //   tag.toLowerCase().includes(search.toLowerCase())
-        // )
+        || attractions.tags.some((tag) =>
+          tag.toLowerCase().includes(search.toLowerCase())
+        )
       ),
     });
   };
@@ -287,8 +243,46 @@ export default class DisplayAllAttractions extends Component {
 
   render() {
     return (
-      <div id="form-container">
-        <header className="header">
+        <div>
+        <header>
+          <div id="topbar" className="hide-s hide-m">
+            <div className="line">
+
+              <div className="s-12 m-6 l-6">
+                <div className="social right">
+                  <a><i className="icon-facebook_circle"></i></a> <a><i
+                    className="icon-twitter_circle"></i></a> <a><i className="icon-google_plus_circle"></i></a>
+                  <a><i className="icon-instagram_circle"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <nav>
+
+            <div className="line">
+              <div className="m-12 l-2">
+                {/*<img src={ (`.Images/headerImage.png`)}/>*/}
+              </div>
+
+
+              <div className="top-nav s-12 l-10">
+                <input id="search" type="text" placeholder="     Search" onChange= {this.handleSearch}/>
+                <ul className="right">
+                  <li className="active-item"><a href="#carousel">Home</a></li>
+                  <li><a href="#features">Features</a></li>
+                  <li><a href="#about-us">About Us</a></li>
+                  <li><a href="#our-work">Our Work</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+
+      <div id="listFilter">
+
           <Link className="blue-button" to="/loadDataATTRACTIONS">
             {" "}
             Load Data ATTRACTIONS{" "}
@@ -301,7 +295,7 @@ export default class DisplayAllAttractions extends Component {
           <Link className="blue-button" to="/ResetAttractions">
             Delete All ATTRACTIONS
           </Link>
-        </header>
+
 
         <div className="sticky__btns">
           <div id="sortingDiv">
@@ -327,12 +321,6 @@ export default class DisplayAllAttractions extends Component {
             </select>
           </div>
           <br />
-          <input
-            id="search"
-            type="text"
-            placeholder="Search"
-            onChange={this.handleSearch}
-          />
 
           <SelectCheckBox
             values={this.state.tags}
@@ -357,10 +345,11 @@ export default class DisplayAllAttractions extends Component {
           />
         </div>
 
-        <div className="form-container">
+        <div>
           <AttractionsTable Attractions={this.state.Attractions} />
         </div>
       </div>
+        </div>
     );
   }
 }
