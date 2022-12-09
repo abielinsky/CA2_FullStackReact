@@ -1940,13 +1940,6 @@ footer p, footer a:visited, footer a, footer a:hover {
 
 
 
-input [type="button"]
-{
-    color:pink;
-}
-
-box-sizing:border-box
-
 .slideshow-container
 {
     max-width: 100px;
@@ -1955,94 +1948,12 @@ box-sizing:border-box
     display: flex;
 }
 
-.mySlides {
-    display: none;
-    margin: 0px;
-    padding-left: 2px;
-    padding-top: 50px;
-}
-
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding-right: 15px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 1px 1px se;
-
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 3px 3px 3px;
-
-}
-
-
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.9);
-}
-
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-/*fade {*/
-/*from {opacity: .4}*/
-/*to {opacity: 1}*/
-/*}*/
-
 #imagesSlices{
 
     width: 100%;
-    height: 550px;
+    height: 650px;
 
 
 }
 
-.centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-family: Comic Sans MS;
-    font-size: 60px;
-    text-align: center;
-}
 
-@media screen and (max-width: 1060px){
-    #primary {width: 67%;}
-    #secondary {width:30%; margin-left: 3%;}
-
-}
-
-@media screen and (max-width: 768px){
-    #primary {width: 100%;}
-    #secondary {width:100%; margin: 0; border:none;}
-
-}

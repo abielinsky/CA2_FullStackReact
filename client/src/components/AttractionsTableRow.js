@@ -45,9 +45,6 @@ export default class AttractionsTableRow extends Component {
                              <Link className="buttonDelete"
                                        to={"/DeleteAttractions/" + this.props.Attractions._id}><MdDeleteForever/>Delete</Link>
 
-
-
-
                             </div>
                 </div>
 
