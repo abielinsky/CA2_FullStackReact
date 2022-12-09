@@ -243,6 +243,7 @@ export default class DisplayAllAttractions extends Component {
 
   render() {
     return (
+
         <div>
         <header>
           <div id="topbar" className="hide-s hide-m">
@@ -279,6 +280,11 @@ export default class DisplayAllAttractions extends Component {
             </div>
           </nav>
         </header>
+          <div className="slideshow-container">
+            <img id="imagesSlices" src="Images/Dublin.jpg" alt=""/>
+            <div className="centered">50 Irish Attractions Off The Beaten Path</div>
+            </div>
+
 
 
       <div id="listFilter">

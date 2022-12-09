@@ -1945,53 +1945,104 @@ input [type="button"]
     color:pink;
 }
 
-/*input [type="button"]*/
-/*{*/
-/*color:pink;*/
+box-sizing:border-box
+
+.slideshow-container
+{
+    max-width: 100px;
+    /*    position: relative;*/
+
+    display: flex;
+}
+
+.mySlides {
+    display: none;
+    margin: 0px;
+    padding-left: 2px;
+    padding-top: 50px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding-right: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 1px 1px se;
+
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 3px 3px 3px;
+
+}
+
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.9);
+}
+
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/*fade {*/
+/*from {opacity: .4}*/
+/*to {opacity: 1}*/
 /*}*/
 
+#imagesSlices{
+
+    width: 100%;
+    height: 550px;
 
 
+}
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: Comic Sans MS;
+    font-size: 60px;
+    text-align: center;
+}
 
+@media screen and (max-width: 1060px){
+    #primary {width: 67%;}
+    #secondary {width:30%; margin-left: 3%;}
 
-/*!* table of cars *!*/
-/*.table-container table*/
-/*{*/
-/*    width:100%;*/
-/*    border-collapse:collapse;*/
-/*}*/
+}
 
-/*.table-container thead*/
-/*{*/
-/*    background-color: #aaa;*/
-/*    color:#fff;*/
-/*    text-align: left;*/
-/*    text-transform: capitalize;*/
-/*}*/
+@media screen and (max-width: 768px){
+    #primary {width: 100%;}
+    #secondary {width:100%; margin: 0; border:none;}
 
-/*.table-container thead th,*/
-/*.table-container tbody td*/
-/*{*/
-/*    padding:5px;*/
-/*}*/
-/*.table-container tbody tr:nth-child(odd) */
-/*{*/
-/*    background-color: #eee;*/
-/*}*/
-
-/*.table-container tbody tr:nth-child(even) */
-/*{*/
-/*    background-color: #ffa;*/
-/*}*/
-
-/*.table-container tbody tr:nth-child(even)*/
-/*{*/
-/*    background-color: #ffa;*/
-/*}*/
-
-/*.add-new-car*/
-/*{*/
-/*    margin-top:1em;*/
-/*}*/
-/*!*end of table of cars *!*/
+}
