@@ -13,6 +13,12 @@ export default class AttractionsTableRow extends Component {
         }
     }
     render() {
+        let src
+        try{
+            src='https://maps.google.com/maps?q=' + this.props.Attractions.geo.latitude + ',' + this.props.Attractions.geo.longitude + '&t=&z=15&ie=UTF8&iwloc=&output=embed'
+        } catch(err){
+            src='https://maps.google.com/maps?q='+this.props.Attractions.name+'&t=&z=15&ie=UTF8&iwloc=&output=embed'
+        }
         return (
 
 
@@ -22,6 +28,7 @@ export default class AttractionsTableRow extends Component {
 
 
                    <h4 className="Attractions__name">{this.props.Attractions.name}</h4>
+                <iframe src = {src} title={this.props.Attractions.name+"frame"}></iframe>
 
                      {/*<p className="Attractions__url">{this.props.Attractions.url}</p>*/}
 
