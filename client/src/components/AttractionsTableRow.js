@@ -20,7 +20,6 @@ export default class AttractionsTableRow extends Component {
                <img className=" attraction-image"
                         src={require(`./Images1/${this.props.Attractions.address.addressLocality}.jpg`)}/>
 
-
                    <h4 className="Attractions__name">{this.props.Attractions.name}</h4>
 
                      {/*<p className="Attractions__url">{this.props.Attractions.url}</p>*/}

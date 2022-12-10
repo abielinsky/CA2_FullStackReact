@@ -242,8 +242,8 @@ export default class DisplayAllAttractions extends Component {
   };
 
   render() {
-    return (
 
+    return (
         <div>
         <header>
           <div id="topbar" className="hide-s hide-m">
@@ -262,16 +262,15 @@ export default class DisplayAllAttractions extends Component {
 
             <div className="line">
               <div className="m-12 l-2">
-                {/*<img src={ (`.Images/headerImage.png`)}/>*/}
-              </div>
 
+              </div>
 
               <div className="top-nav s-12 l-10">
                 <input id="search" type="text" placeholder="     Search" onChange= {this.handleSearch}/>
                 <ul className="right">
                   <li className="active-item"><a href="#carousel">Home</a></li>
-                  <li><a href="#features">Features</a></li>
-                  <li><a href="#about-us">About Us</a></li>
+                  <li><a href="#AttractionFilter"> Filters</a></li>
+                  <li><a href="#Attractions">Irish Attractions</a></li>
                   <li><a href="#our-work">Our Work</a></li>
                   <li><a href="#services">Services</a></li>
                   <li><a href="#contact">Contact</a></li>
@@ -281,81 +280,103 @@ export default class DisplayAllAttractions extends Component {
           </nav>
         </header>
 
-             <div>
-            <img id="imagesSlices" src={ require(`./Image/Limerick.jpg`)} />
+
+
+
+            <div >
+              <img id="imagesSlices" src={ require(`./Image/Limerick.jpg`)}/>
             </div>
 
 
+          <div id="attracFilter">
+            <a id={"AttractionFilter"}><strong>Attraction`s Filter</strong></a></div>
 
 
       <div id="listFilter">
 
-          <Link className="blue-button" to="/loadDataATTRACTIONS">
+<div id="alignAttractionFilter">
+          <Link id="alignAttractionFilter" to="/loadDataATTRACTIONS">
             {" "}
-            Load Data ATTRACTIONS{" "}
+            Load Data {" "}
           </Link>
-          <span>&nbsp; | &nbsp; </span>
-          <Link className="blue-button" to="/AddATTRACTIONS">
-            Add new ATTRACTIONS
+          {/*<span>&nbsp; | &nbsp; </span>*/}
+          <Link id="alignAttractionFilter" to="/AddATTRACTIONS">
+            Add new Attraction
           </Link>
-          <span>&nbsp;| &nbsp;</span>
-          <Link className="blue-button" to="/ResetAttractions">
-            Delete All ATTRACTIONS
+          {/*<span>&nbsp;| &nbsp;</span>*/}
+          <Link  id="alignAttractionFilter"to="/ResetAttractions">
+            Delete All Attraction
           </Link>
 
-
-        <div className="sticky__btns">
-          <div id="sortingDiv">
-            <select onChange={this.handleClick}>
+            <select id="alignAttractionFilter" onChange={this.handleClick}>
               <option value="Name list">Name List</option>
               <option value="Ascending">A-Z</option>
               <option value="Descending">Z-A</option>
             </select>
-            <select onChange={this.handleAddressRegionClick}>
+            <select  id="alignAttractionFilter" onChange={this.handleAddressRegionClick}>
               <option value="Name list">Region List </option>
               <option value="Ascending">A-Z</option>
               <option value="Descending">Z-A</option>
             </select>
-            <select onChange={this.handleTelephoneClick}>
+        <select id="alignAttractionFilter" onChange={this.handleAddressLocalityClick}>
+          <option value="Name list">Address Locality</option>
+          <option value="Ascending">Ascending</option>
+          <option value="Descending">Descending</option>
+        </select>
+            <select  id="alignAttractionFilter" onChange={this.handleTelephoneClick}>
               <option value="Name list">Telephone List </option>
               <option value="Ascending">Ascending</option>
               <option value="Descending">Descending</option>
             </select>
-            <select onChange={this.handleAddressLocalityClick}>
-              <option value="Name list">address Locality</option>
-              <option value="Ascending">Ascending</option>
-              <option value="Descending">Descending</option>
-            </select>
-          </div>
+
+</div>
           <br />
 
-          <SelectCheckBox
+          <SelectCheckBox  placeholder="Select Tags"
             values={this.state.tags}
             onchange={this.handleFilterTagsChange}
             optionselected={this.state.tagSelected}
           />
-          <SelectCheckBox
+
+          <SelectCheckBox   placeholder="Select type Attraction"
             values={this.state.types}
             onchange={this.handleFilterTypesChange}
             optionselected={this.state.typeSelected}
           />
 
-          <SelectCheckBox
+            <SelectCheckBox   placeholder="Select Address Region"
+              values={this.state.regions}
+              onchange={this.handleFilterRegionChange}
+              optionselected={this.state.regionSelected}
+            />
+
+          <SelectCheckBox   placeholder="Select Address Locality"
             values={this.state.localities}
             onchange={this.handleFilterLocalitiesChange}
             optionselected={this.state.localitySelected}
           />
-          <SelectCheckBox
-            values={this.state.regions}
-            onchange={this.handleFilterRegionChange}
-            optionselected={this.state.regionSelected}
-          />
+
+
+
         </div>
+          <div id="IrishAttractionr">
+          <a id="Attractions"><strong>Irish Attractions</strong></a></div>
 
         <div>
           <AttractionsTable Attractions={this.state.Attractions} />
         </div>
+
+
+    <div id="footer">
+      <div>
+        <div id="connect">
+          <a href="https://www.facebook.com/FillYourHeartWithIreland/"   className="facebook"><img width="50" src={ require(`./Image/face.png`)} /></a>
+          <a href="http://twitter.com/GoToIreland" className="twitter"><img width="40" src={ require(`./Image/instag.jpg`)} /></a>
+          <a href="https://www.instagram.com/tourismireland/" className="instagram"><img width="40" src={ require(`./Image/twitter.png`)} /></a>
+        </div>
+        <p>&copy; 2023 Tourism Ireland. All Rights Reserved.</p>
       </div>
+    </div>
         </div>
     );
   }

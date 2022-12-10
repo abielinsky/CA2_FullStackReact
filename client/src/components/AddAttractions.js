@@ -40,7 +40,6 @@ export default class AddAttractions extends Component
         }
     }
 
-
     componentDidMount() {
         this.inputToFocus.focus()
     }
@@ -188,21 +187,21 @@ export default class AddAttractions extends Component
         return (
             <div className="formAdd__body">
 
-                <header className="header">
+                <header1 className="header1">
 
-                    <Link className="blue-button" to="/loadDataATTRACTIONS"> Load Data ATTRACTIONS </Link><span>&nbsp;  | &nbsp; </span>
-                    <Link className="blue-button" to="/DisplayAllATTRACTIONS"> Display All ATTRACTIONS <span>| </span></Link>&nbsp;
-                    <Link className="blue-button" to="/AddATTRACTIONS">Add new ATTRACTIONS</Link><span>&nbsp;| &nbsp;</span>
-                    <Link className="blue-button" to="/ResetAttractions">Delete All ATTRACTIONS</Link>
+                    <Link className="blue-button" to="/loadDataATTRACTIONS"> Load Data Attractions </Link>
+                    <Link className="blue-button" to="/DisplayAllATTRACTIONS"> Display All Attractions </Link>
+                    <Link className="blue-button" to="/AddATTRACTIONS">Add new Attractions</Link>
+                    <Link className="blue-button" to="/ResetAttractions">Delete All Attractions</Link>
 
-                </header>
+                </header1>
 
                 <div className="wrapperAdd">
 
                     {this.state.redirectToDisplayAllAttractions ? <Redirect to="/DisplayAllATTRACTIONS"/> : null}
 
                     <Form className="addForm__container">
-                        <h2 className="title_editForm">Add new ATTRACTION </h2>
+                       <h5> ADD NEW ATTRACION</h5>
 
                         <Form.Group controlId="name">
                             <Form.Label className="form__label" style={this.validateName() ? {
@@ -416,13 +415,10 @@ export default class AddAttractions extends Component
                         </Form.Group>
                         {TagsErrorMessage}
 
-                        {/*<div className="form__footer">*/}
-                            <button type="submit" onClick={this.handleSubmit}>Submit</button>
-                            {/*<LinkInClass className="formADD-buttons"  onClick={this.handleSubmit}/>*/}
-                            {/*{errorMessage}*/}
+                        <button type="submit" onClick={this.handleSubmit}>Submit</button>
+                        <Link className="redCancel-button" to={"/DisplayAllAttractions"}><GiCancel/></Link>
 
-                            <Link className="redCancel-button" to={"/DisplayAllAttractions"}></Link>
-                        {/*</div>*/}
+
 
 
                     </Form>
@@ -430,10 +426,6 @@ export default class AddAttractions extends Component
             </div>
         )
     }
-
-
-
-
 
 
 }

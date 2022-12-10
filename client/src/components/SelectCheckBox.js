@@ -11,7 +11,7 @@ const Option = (props) => {
           checked={props.isSelected}
           onChange={() => null}
         />{" "}
-        <label>{props.label}</label>
+        <label >{props.label}</label>
       </components.Option>
     </div>
   );

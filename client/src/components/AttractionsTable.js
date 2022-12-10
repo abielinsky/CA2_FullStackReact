@@ -13,7 +13,6 @@ export default class AttractionsTable extends Component
         };
     }
 
-
     render() 
     {
         return (

@@ -126,7 +126,7 @@ export default class EditAttractions extends Component {
     }
 
     validateName() {
-        const pattern = /^[0-9a-zA-Z !@%£$?+\s]+$/
+        const pattern = /^[a-zA-Z \s]+$/
         return pattern.test(String(this.state.name))
     }
 
@@ -146,7 +146,7 @@ export default class EditAttractions extends Component {
     }
 
     validatetelephone() {
-        const pattern = /^[0-9]+$/
+        const pattern = /^[+0-9]+$/
         return pattern.test(String(this.state.telephone))
     }
 
@@ -204,24 +204,21 @@ export default class EditAttractions extends Component {
         return (
             <div className="formAdd__body">
 
-                <header className="header">
+                <header1 className="header1">
 
-                    <Link className="blue-button" to="/loadDataATTRACTIONS"> Load Data
-                        ATTRACTIONS </Link><span>&nbsp;  | &nbsp; </span>
-                    <Link className="blue-button" to="/DisplayAllATTRACTIONS"> Display All
-                        ATTRACTIONS <span>| </span></Link>&nbsp;
-                    <Link className="blue-button" to="/AddATTRACTIONS">Add new
-                        ATTRACTIONS</Link><span>&nbsp;| &nbsp;</span>
-                    <Link className="blue-button" to="/ResetAttractions">Delete All ATTRACTIONS</Link>
+                    <Link className="blue-button" to="/loadDataATTRACTIONS"> Load Data Attractions </Link>
+                    <Link className="blue-button" to="/DisplayAllATTRACTIONS"> Display All Attractions </Link>
+                    <Link className="blue-button" to="/AddATTRACTIONS">Add new Attractions</Link>
+                    <Link className="blue-button" to="/ResetAttractions">Delete All Attractions</Link>
 
-                </header>
+                </header1>
 
                 <div className="wrapperAdd">
 
                     {this.state.redirectToDisplayAllAttractions ? <Redirect to="/DisplayAllATTRACTIONS"/> : null}
 
                     <Form className="addForm__container">
-                        <h2 className="title_editForm">EDIT ATTRACTION </h2>
+                        <h5 className="title_editForm">EDIT ATTRACTION </h5>
 
                         <Form.Group controlId="name">
                             <Form.Label className="form__label" style={this.validateName() ? {
@@ -438,13 +435,9 @@ export default class EditAttractions extends Component {
                             </div> : null}
 
                         </Form.Group>
-
                         {TagsErrorMessage}
-
                         <button className="redCancel-button" type="submit" onClick={this.handleSubmit}><GiSave/></button>
-                        {/*<LinkInClass className="formADD-buttons"  onClick={this.handleSubmit}/>*/}
                         <Link className="redCancel-button" to={"/DisplayAllAttractions"}><GiCancel/></Link>
-                        {/*</div>*/}
 
 
                     </Form>
@@ -452,16 +445,6 @@ export default class EditAttractions extends Component {
             </div>
         )
     }
-
-
-
-
-
-
-
-
-
-
 
 
 }

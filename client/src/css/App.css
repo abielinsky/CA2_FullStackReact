@@ -1,4 +1,157 @@
 
+.slideshow-container
+{
+    max-width: 100px;
+    /*    position: relative;*/
+
+    display: flex;
+}
+
+#imagesSlices{
+
+    width: 100%;
+    height: 650px;
+
+
+}
+
+
+.attraction-image{
+    height:300px;
+    width:100%;
+
+}
+
+#irishAttraction p
+{
+    font-family:sans-serif;
+    text-align:justify-all;
+    padding-left:8px;
+    margin-right: 5px;
+}
+#irishAttraction
+{
+    background-color: white;
+    margin:20px;
+    width:320px;
+    height:635px;
+    /*float: left;*/
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+    display:inline-flex;
+    /*display-:block;*/
+    flex-wrap: wrap;
+    border-radius: 8px;
+    border:none;
+
+}
+
+.buttonDelete
+{
+    color:white;
+    background-color: red;
+    border:none;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+    padding: 8px 8px;
+    transition-duration: 0.2s;
+    margin-top: 25px;
+    /*margin-left: 65px;*/
+    margin-bottom: 10px;
+
+
+}
+.buttonDelete:hover {
+    cursor:pointer;
+    background-color: #DF4661;
+    color: white;
+}
+
+.buttonEdit
+{
+    color:white;
+    background-color: #aaa;
+    border-radius: 4px;
+    border:none;
+    font-size: 12px;
+    text-align: center;
+    padding: 8px 8px;
+    transition-duration: 0.2s;
+    margin-bottom: 10px;
+    margin-top: 30px;
+
+}
+#alignButton{
+    padding-left: 130px;
+}
+
+.buttonEdit:hover {
+    cursor:pointer;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+h4{
+    font-family:sans-serif;
+    text-align:justify-all;
+    padding-left:8px;
+    margin-right: 5px;
+}
+
+
+#search{
+
+    height:40px;
+    width: 25%;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 200px;
+
+
+}
+#listFilter{
+    padding-top: 100px;
+    align-items: center;
+
+}
+
+#alignAttractionFilter{
+    align-items: center;
+    padding-left: 40px;
+
+}
+
+select {
+    border:none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    padding: 6px 10px;
+    transition-duration: 0.2s;
+    margin: 10px 0;
+}
+
+#sortingDiv{
+    padding-top: 10px;
+}
+#attracFilter{
+
+    font-size: 25px;
+    text-align: center;
+    padding-top: 100px;
+}
+#IrishAttractionr{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 60px;}
+
+
+SelectCheckBox.larger{
+    width:100px;
+    height: 50px;
+}
 
 
 /*----------------------------------------------------------------------*/
@@ -38,110 +191,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-.attraction-image{
-    height:300px;
-    width:100%;
-
-}
-
-
-
-
-
-#irishAttraction p
-{
-    font-family:sans-serif;
-    text-align:justify-all;
-    padding-left:8px;
-    margin-right: 5px;
-}
-#irishAttraction
-{
-    background-color: white;
-    margin:27px;
-    width:300px;
-    height:635px;
-    /*float: left;*/
-    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
-    display:inline-flex;
-    /*display-:block;*/
-    flex-wrap: wrap;
-    border-radius: 8px;
-    border:none;
-
-
-}
-
-
-
-.buttonDelete
-{
-    color:white;
-    background-color: red;
-    border:none;
-    border-radius: 4px;
-    font-size: 12px;
-    text-align: center;
-    /*padding: 8px 8px;*/
-    transition-duration: 0.2s;
-    margin-top: 25px;
-    /*margin-left: 65px;*/
-    margin-bottom: 10px;
-
-
-}
-.buttonDelete:hover {
-    cursor:pointer;
-    background-color: #DF4661;
-    color: white;
-}
-
-.buttonEdit
-{
-    color:white;
-    background-color: #aaa;
-    border-radius: 4px;
-    border:none;
-    font-size: 12px;
-    text-align: center;
-    /*padding: 8px 8px;*/
-    transition-duration: 0.2s;
-    margin-bottom: 10px;
-    margin-top: 30px;
-
-}
-#alignButton{
-    padding-left: 130px;
-}
-
-.buttonEdit:hover {
-    cursor:pointer;
-    background-color: #4CAF50;
-    color: white;
-}
-
-
-h4{
-    font-family:sans-serif;
-    text-align:justify-all;
-    padding-left:8px;
-    margin-right: 5px;
-}
-
-
-#search{
-
-    height:40px;
-    width: 25%;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-left: 200px;
-
-
-}
-#listFilter{
-    padding-top: 200px;
-}
 
 
 
@@ -153,7 +202,7 @@ h5 {font-size:1.1rem;}
 h6 {font-size:0.9rem;}
 a, a:link, a:visited, a:hover, a:active, strong {
     text-decoration:none;
-    color:#9BB800;
+    /*color:#9BB800;*/
     transition:color 0.20s linear 0s;
     -o-transition:color 0.20s linear 0s;
     -ms-transition:color 0.20s linear 0s;
@@ -1755,14 +1804,7 @@ form.customform button.color-btn {
     filter: grayscale(100%);
     filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
 }
-footer {
-    background: none repeat scroll 0 0 #00283a;
-    padding: 3.5em 0;
-}
-footer p, footer a:visited, footer a, footer a:hover {
-    color: #6c7c84;
-    font-size: 0.8em;
-}
+
 @media screen and (max-width: 768px) {
     header {
         position: relative;
@@ -1820,101 +1862,26 @@ footer p, footer a:visited, footer a, footer a:hover {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.form-container*/
-/*{*/
-/*      border:thin solid #aaaaaa;*/
-/*    padding: 20px;*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*    border-radius: 5px;*/
-/*    background: #f7f7f7;*/
-/*}*/
-
-/*.form-container*/
-/*{*/
-/*      border:thin solid #aaaaaa;*/
-/*    padding: 20px;*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*    border-radius: 5px;*/
-/*    background: #f7f7f7;*/
-/*}*/
-
-
 /* link buttons */
-.green-button,
-.red-button,
+/*.green-button,*/
+/*.red-button,*/
 .blue-button
 {
     padding: 7px 10px;
-    font-size: 0.875rem;
+    font-size: 20px;
     line-height: normal;
     border-radius: 0.2rem;
-    color: #fff;
-    background-color: #28a745;
-    border-color: #28a745;
+    color: white;
+    background-color: lightslategray;
+    border-color: white;
     margin-right: 10px;
     position: relative;
     top: 1px;
     text-decoration: none;
     cursor:pointer;
+    margin-top: 40px;
+
 }
-
-/*!* link buttons *!*/
-/*.green-button,*/
-/*.red-button,*/
-/*.blue-button*/
-/*{*/
-/*  padding: 7px 10px;*/
-/*  font-size: 0.875rem;*/
-/*  line-height: normal;*/
-/*  border-radius: 0.2rem;*/
-/*  color: #fff;*/
-/*  background-color: #28a745;*/
-/*  border-color: #28a745;*/
-/*  margin-right: 10px;*/
-/*  position: relative;*/
-/*  top: 1px;*/
-/*  text-decoration: none;*/
-/*  cursor:pointer;*/
-/*}*/
-
-/*.green-button*/
-/*{*/
-/*    background-color: #28a745;*/
-/*}*/
-
-/*.red-button*/
-/*{*/
-/*    background-color: #dc3545;*/
-/*}*/
-
-/*.blue-button*/
-/*{*/
-/*    background-color: #3545dc;*/
-/*}*/
 
 .green-button:hover
 {
@@ -1926,34 +1893,184 @@ footer p, footer a:visited, footer a, footer a:hover {
     background-color: #a01020;
 }
 
-.blue-button:hover
-{
-    background-color: #1020a0;
-}
-/* end of link buttons */
-
 /*.blue-button:hover*/
 /*{*/
-/*  background-color: #1020a0;*/
+/*    background-color: #1020a0;*/
 /*}*/
-/*!* end of link buttons *!*/
 
 
 
-.slideshow-container
-{
-    max-width: 100px;
-    /*    position: relative;*/
 
-    display: flex;
-}
 
-#imagesSlices{
+/* Website template by freewebsitetemplates.com */
+/*================footer-styles*/
+#footer {
 
+    background-color: #2b4c61;
+    padding: 0;
     width: 100%;
-    height: 650px;
-
+    margin-top: 70px;
 
 }
+
+#footer div p {
+    color: #FFFFFF;
+    display: block;
+    font-family: roboto-regular-webfont;
+    font-size: 17px;
+    font-weight: normal;
+    line-height: 15px;
+    margin: 0;
+    padding: 33px 0 50px;
+    text-align: center;
+    text-transform: none
+}
+
+#connect{
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 33px 0 10px;
+
+}
+
+ /*=============Edit Box*/
+
+.wrapperAdd {
+
+    bottom: 100px;
+    margin: 100px auto 80px auto;
+    width: 50%;
+    height: auto;
+    justify-content: center;
+    color: grey;
+    background: lightslategray;
+    opacity: 0.8;
+    border-radius: 10px;
+    box-shadow: 0 0 7px white;
+}
+
+.addForm__container {
+    width: 80%;
+    height: 50%;
+    margin: 20px auto 20px auto;
+    text-align: center;
+    color: white;
+    font-style: italic;
+}
+
+ .form__label {
+      color: yellow;
+      float: left;
+      fontStyle: normal;
+      fontWeight: bold;
+      margin-left: 10px;
+  }
+ .form__control {
+      line-height: 1.5;
+      color: pink;
+      background-color: #fff;
+      background-clip: padding-box;
+
+      border-radius: 0.25rem;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  }
+ .header1{
+     Padding-top:30px;
+     align-items: center;
+     padding-left: 250px;
+ }
+
+
+.formADD-buttons {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    padding: 7px 10px;
+    font-size: 2rem;
+    line-height: normal;
+    border-radius: 0.2rem;
+    color: green;
+    background: transparent;
+    border-color: #28a745;
+    margin-right: 10px;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    top: 1px;
+    animation: bounceSide 0.5s alternate ease infinite;
+}
+
+
+.redCancel-button {
+    width: 50px;
+    margin: 5px;
+    padding: 0px 5px;
+    font-size: 2rem;
+    line-height: normal;
+    border-radius: 0.2rem;
+    color: red;
+    background-color: black;
+    position: relative;
+    top: 1px;
+    text-decoration: none;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+    animation: bounceSide 0.5s alternate ease infinite;
+}
+
+
+/*============Edit form*/
+.formEdit__body {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+    opacity: 0.9;
+}
+
+ .wrapperEdit {
+
+     bottom: 100px;
+     margin: 20px auto 80px auto;
+     width: 50%;
+     height: auto;
+     justify-content: center;
+     color: white;
+     background: black;
+     opacity: 0.8;
+     border-radius: 10px;
+     box-shadow: 0 0 7px white;
+ }
+
+ .addForm__container {
+     width: 80%;
+     height: 50%;
+     margin: 20px auto 20px auto;
+     text-align: center;
+     color: white;
+     font-style: italic;
+ }
+ #Tags{
+     text-align: justify-all;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
