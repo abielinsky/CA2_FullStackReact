@@ -6,7 +6,6 @@ import {SERVER_HOST} from "../config/global_constants"
 import LinkInClass from "../components/LinkInClass"
 import {GiCancel} from 'react-icons/gi'
 
-
 //validation data inputs using regex ?
 export default class AddAttractions extends Component
 {

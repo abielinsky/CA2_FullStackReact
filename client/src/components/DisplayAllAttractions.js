@@ -271,21 +271,21 @@ export default class DisplayAllAttractions extends Component {
                   <li className="active-item"><a href="#carousel">Home</a></li>
                   <li><a href="#AttractionFilter"> Filters</a></li>
                   <li><a href="#Attractions">Irish Attractions</a></li>
-                  <li><a href="#our-work">Our Work</a></li>
-                  <li><a href="#services">Services</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="https://www.facebook.com/FillYourHeartWithIreland/" >Reservations</a></li>
+                  <li><a href="http://twitter.com/GoToIreland" >About Us</a></li>
+                  <li><a href="https://www.instagram.com/tourismireland/">Contact</a></li>
                 </ul>
               </div>
             </div>
           </nav>
         </header>
 
-
-
-
-            <div >
+            <div  className="imageCentered">
               <img id="imagesSlices" src={ require(`./Image/Limerick.jpg`)}/>
+
             </div>
+          <div id="attracFilter">
+          <a id={"AttractionFilter"}><strong>50 Irish Attractions Off The Beaten Path</strong></a></div>
 
 
           <div id="attracFilter">
